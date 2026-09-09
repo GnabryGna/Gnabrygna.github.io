@@ -107,18 +107,57 @@ h3 {
 .publication p { margin-bottom: 0; color: #a0a8b0; }
 .publication p strong { font-weight: 600; color: #6b7280; }
 
-/* ---------- 영상 ---------- */
-.video {
-  margin: 0.75em 0 1.5em;
-  max-width: 42em;
+/* ---------- 번호 매기기 (논문 / 프로젝트만) ---------- */
+#publications, #projects { counter-reset: item; }
+#publications > .publication > h3::before,
+#projects > .publication > h3::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  display: inline-block;
+  width: 1.5em;          /* 번호 칸 고정 폭 */
+  flex-shrink: 0;
+  color: #a0a8b0;
 }
-.video video {
+/* 제목이 번호 뒤에서 시작하므로, 저자줄과 하위 요소도 같은 만큼 들여씁니다. */
+#publications > .publication > p,
+#projects > .publication > p,
+#projects > .publication > .videos {
+  padding-left: 1.5em;
+}
+
+/* ---------- 영상 토글 ---------- */
+.videos { margin-top: 0.75em; }
+.videos summary {
+  cursor: pointer;
+  color: rgb(20, 110, 190);
+  font-size: .95em;
+  list-style: none;
+  display: inline-block;
+}
+.videos summary::-webkit-details-marker { display: none; }
+.videos summary::before { content: "\25B8  "; }
+.videos[open] summary::before { content: "\25BE  "; }
+
+/* ---------- 영상 가로 한 줄 ---------- */
+.video-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin: 1em 0 0.5em;
+  flex-wrap: wrap;
+}
+.video-row figure { margin: 0; }
+.video-row .square { width: 16em; }        /* 좌우를 잘라 정사각 */
+.video-row .wide   { width: 28.44em; }     /* 16em x 16/9 */
+.video-row video {
   width: 100%;
+  height: 16em;
+  object-fit: cover;
   border-radius: 0.3em;
   background: #000;
   display: block;
 }
-.video figcaption {
+.video-row figcaption {
   margin-top: 0.4em;
   font-size: .9em;
   color: #a0a8b0;
@@ -129,6 +168,9 @@ h3 {
   #intro { flex-direction: column-reverse; }
   #intro-text { max-width: none; }
   #intro-image { margin: 0 0 1.5em 0; width: 14em; height: 14em; }
+  .video-row .square, .video-row .wide { width: 100%; }
+  .video-row video { height: auto; aspect-ratio: 16 / 9; }
+  .video-row .square video { aspect-ratio: 1 / 1; }
   h3 { display: block; }
   .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
 }
