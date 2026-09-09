@@ -45,17 +45,21 @@ h1 { font-size: 2.4em; line-height: 2.4em; font-weight: 500; }
 #intro-image {
   margin: 2em 0 0 2em;
   width: 20em;
+  height: 20em;          /* 정사각 */
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 0.3em;
   align-self: flex-start;
 }
-/* 음수 마진으로 위쪽 20% 를 잘라냅니다. 정사각 원본이라
-   보이는 높이는 가로폭의 80% 가 됩니다. */
+/* 사진을 125% 로 키운 뒤 위쪽 1/5 을 잘라내면, 남은 부분이
+   정사각 틀을 정확히 채웁니다. 음수 마진의 % 는 컨테이너
+   '가로폭' 기준이라 -25% = -5em, -12.5% = -2.5em 입니다. */
 #intro-image img {
-  width: 100%;
+  width: 125%;
+  height: 125%;
+  object-fit: cover;
   display: block;
-  margin-top: -20%;
+  margin: -25% 0 0 -12.5%;
 }
 
 /* ---------- 섹션 ---------- */
@@ -124,7 +128,7 @@ h3 {
 @media (max-width: 760px) {
   #intro { flex-direction: column-reverse; }
   #intro-text { max-width: none; }
-  #intro-image { margin: 0 0 1.5em 0; width: 14em; }
+  #intro-image { margin: 0 0 1.5em 0; width: 14em; height: 14em; }
   h3 { display: block; }
   .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
 }
