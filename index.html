@@ -4,285 +4,154 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Geunha Kim</title>
-<meta name="description" content="Geunha Kim — M.S. student in Artificial Intelligence at Hanyang University. Robot learning, vision-language-action models, sim-to-real transfer.">
+<meta name="description" content="Geunha Kim — M.S. student in Artificial Intelligence at Hanyang University. VLA models, sim-to-real transfer, robot manipulation.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🤖</text></svg>">
-
-<style>
-:root {
-  --bg:   #ffffff;
-  --fg:   #111111;
-  --mute: #6b6b6b;
-  --line: #e2e2e2;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:   #0e0e0e;
-    --fg:   #ededed;
-    --mute: #9a9a9a;
-    --line: #2a2a2a;
-  }
-}
-
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  padding: 5rem 1.5rem 6rem;
-  background: var(--bg);
-  color: var(--fg);
-  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
-        "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-main { max-width: 720px; margin: 0 auto; }
-
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  margin: 0 0 .4rem;
-}
-.tagline { color: var(--mute); margin: 0; }
-.links {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  font-size: .9rem;
-}
-a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
-a:hover { border-bottom-color: currentColor; }
-
-section { margin-top: 3.5rem; }
-h2 {
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--mute);
-  margin: 0 0 1.4rem;
-  padding-bottom: .6rem;
-  border-bottom: 1px solid var(--line);
-}
-p { margin: 0 0 1rem; }
-
-/* dash list — research interests, tools, awards */
-ul.plain { list-style: none; margin: 0; padding: 0; }
-ul.plain > li { margin-bottom: .4rem; padding-left: 1.2rem; text-indent: -1.2rem; }
-ul.plain > li::before { content: "—"; color: var(--mute); margin-right: .6rem; }
-
-/* entry — education, research, projects */
-.entry { margin-bottom: 1.6rem; }
-.entry:last-child { margin-bottom: 0; }
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-}
-.title { font-weight: 600; }
-.when  { color: var(--mute); font-size: .85rem; white-space: nowrap; }
-.desc  { color: var(--mute); font-size: .95rem; margin-top: .1rem; }
-
-/* nested bullets inside a project */
-.sub { list-style: none; margin: .6rem 0 0; padding: 0; font-size: .92rem; color: var(--mute); }
-.sub li { padding-left: 1rem; text-indent: -1rem; margin-bottom: .2rem; }
-.sub li::before { content: "·"; margin-right: .6rem; }
-
-/* publications */
-.pub { margin-bottom: 1.5rem; }
-.pub:last-child { margin-bottom: 0; }
-.pub .name { font-weight: 600; }
-.pub .authors, .pub .venue { color: var(--mute); font-size: .9rem; }
-.pub .venue { font-style: italic; }
-.note { color: var(--mute); font-size: .8rem; margin-top: 1.5rem; }
-
-footer {
-  margin-top: 5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
-  font-size: .8rem;
-  color: var(--mute);
-}
-
-@media (max-width: 520px) {
-  body { padding-top: 3rem; }
-  h1 { font-size: 1.6rem; }
-  .row { flex-direction: column; gap: .1rem; }
-  .when { white-space: normal; }
-}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-<main>
+<div id="main">
 
-  <header>
-    <h1>Geunha Kim</h1>
-    <p class="tagline">M.S. Student in Artificial Intelligence · Hanyang University · Seoul, Korea</p>
-    <nav class="links">
-      <a href="mailto:keunhaa9@gmail.com">Email</a>
-      <a href="https://github.com/GnabryGna">GitHub</a>
-      <a href="CV_MS_Geunhakim.pdf">CV</a>
-    </nav>
-  </header>
-
-  <section>
-    <h2>About</h2>
-    <!-- TODO: 원하는 문장으로 다듬어주세요 -->
-    <p>
-      I am a master's student in the Department of Artificial Intelligence at
-      Hanyang University, where I work as a graduate researcher at COLAB.
-      My research centers on robot learning for manipulation — in particular
-      vision-language-action models, reward-free goal-conditioned reinforcement
-      learning, and transferring policies from simulation to physical robots.
-    </p>
-  </section>
-
-  <section>
-    <h2>Research Interests</h2>
-    <ul class="plain">
-      <li>Vision-Language-Action Models</li>
-      <li>Robot Manipulation &amp; Dexterous Hand Control</li>
-      <li>Reinforcement Learning &amp; Imitation Learning</li>
-      <li>Sim-to-Real Transfer</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <div class="entry">
-      <div class="row">
-        <span class="title">Hanyang University</span>
-        <span class="when">Feb 2025 – Present</span>
-      </div>
-      <div class="desc">M.S. in Artificial Intelligence · GPA 4.36 / 4.50</div>
+  <!-- ===== 고정 영역 : 탭을 눌러도 바뀌지 않습니다 ===== -->
+  <div id="intro">
+    <div id="intro-text">
+      <h1>Geunha Kim</h1>
+      <p>
+        I'm a master's student in Artificial Intelligence at
+        <a href="https://www.hanyang.ac.kr/">Hanyang University</a>,
+        where I work as a graduate researcher at COLAB.
+      </p>
+      <p>
+        Before that, I studied Multimedia Engineering at Dongguk University
+        &ndash; and along the way, was an undergraduate research assistant at SI Lab.
+      </p>
+      <p>
+        My research interests are vision-language-action models,
+        sim-to-real transfer, and robot manipulation.
+      </p>
+      <p>
+        Find me on <a href="https://github.com/GnabryGna">GitHub</a>,
+        email me <a href="mailto:keunhaa9@gmail.com">here</a>,
+        or read my <a href="CV_MS_Geunhakim.pdf">CV</a>.
+      </p>
     </div>
-    <div class="entry">
-      <div class="row">
-        <span class="title">Dongguk University</span>
-        <span class="when">Mar 2019 – Feb 2025</span>
-      </div>
-      <div class="desc">B.S. in Multimedia Engineering · GPA 3.70 / 4.50</div>
+    <div id="intro-image">
+      <img src="Profile.jpeg" alt="Geunha Kim">
     </div>
-  </section>
+  </div>
 
-  <section>
-    <h2>Research Experience</h2>
-    <div class="entry">
-      <div class="row">
-        <span class="title">Graduate Researcher</span>
-        <span class="when">Feb 2025 – Present</span>
-      </div>
-      <div class="desc">COLAB, Hanyang University</div>
-    </div>
-    <div class="entry">
-      <div class="row">
-        <span class="title">Undergraduate Research Assistant</span>
-        <span class="when">Apr 2023 – Jul 2024</span>
-      </div>
-      <div class="desc">SI Lab, Dongguk University</div>
-    </div>
-  </section>
+  <nav id="tabs">
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#awards">Awards &amp; Activities</a>
+  </nav>
 
-  <section>
-    <h2>Publications</h2>
-
-    <div class="pub">
-      <div class="name">Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning</div>
-      <div class="authors"><strong>G Kim</strong>, H Zhang, J Moon</div>
-      <div class="venue">ICRA 2027 — to be submitted</div>
-    </div>
-
-    <div class="pub">
-      <div class="name">Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for Long-Horizon Planning</div>
-      <div class="authors"><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</div>
-      <div class="venue">T-RL 2026 — under review</div>
-    </div>
-
-    <div class="pub">
-      <div class="name">Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action Models</div>
-      <div class="authors">M Jin*, <strong>G Kim</strong>*, J Moon</div>
-      <div class="venue">IJCAS 2026 — under review</div>
-    </div>
-
-    <div class="pub">
-      <div class="name">Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion Policy</div>
-      <div class="authors">S An*, <strong>G Kim</strong>*, J Moon</div>
-      <div class="venue">ICCAS 2026 — accepted</div>
-    </div>
-
-    <div class="pub">
-      <div class="name">Classify Objects with VLA Grasp Network</div>
-      <div class="authors">S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</div>
-      <div class="venue">ICCAS 2025</div>
-    </div>
-
-    <div class="pub">
-      <div class="name">Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local–Global Embedding Alignment</div>
-      <div class="authors">J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</div>
-      <div class="venue">2024</div>
-    </div>
-
+  <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
+  <div class="tab" id="publications">
     <p class="note">* denotes equal contribution.</p>
-  </section>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="entry">
-      <div class="row">
-        <span class="title">Autonomous Manipulation and Grasping via Imitation Learning with Visuo-Tactile Sensing</span>
-        <span class="when">Jul 2025 – Dec 2026</span>
-      </div>
-      <div class="desc">with KETI</div>
-      <ul class="sub">
-        <li>Developed a VR-based bimanual teleoperation system</li>
-        <li>Constructed a MuJoCo simulation environment</li>
-        <li>Verified imitation learning datasets</li>
-      </ul>
+    <div class="publication">
+      <h3>Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning<span class="pub-meta"><i>Under review</i></span></h3>
+      <p><strong>G Kim</strong>, H Zhang, J Moon</p>
     </div>
-    <div class="entry">
-      <div class="row">
-        <span class="title">Advanced AI R&amp;D Talent Development Program for the Sports Gaming Sector</span>
-        <span class="when">Apr 2023 – Dec 2023</span>
-      </div>
-      <div class="desc">with JOYCITY</div>
-      <ul class="sub">
-        <li>Designed imitation learning rewards</li>
-        <li>Validated algorithm performance through simulation</li>
-      </ul>
-    </div>
-  </section>
 
-  <section>
+    <div class="publication">
+      <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for Long-Horizon Planning<span class="pub-meta"><i>Under review</i></span></h3>
+      <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
+    </div>
+
+    <div class="publication">
+      <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action Models<span class="pub-meta"><i>Under review</i></span></h3>
+      <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
+    </div>
+
+    <div class="publication">
+      <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
+      <p>S An*, <strong>G Kim</strong>*, J Moon</p>
+    </div>
+
+    <div class="publication">
+      <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
+      <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
+    </div>
+
+    <div class="publication">
+      <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
+      <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
+    </div>
+  </div>
+
+  <div class="tab" id="projects">
+    <div class="publication">
+      <h3>Autonomous Manipulation and Grasping via Imitation Learning with Visuo-Tactile Sensing<span class="pub-meta"><i>KETI, 2025&ndash;2026</i></span></h3>
+      <p>Developed a VR-based bimanual teleoperation system, constructed a MuJoCo simulation environment, and verified imitation learning datasets.</p>
+    </div>
+
+    <!-- TODO: caption 을 실제 설명으로 바꿔주세요 -->
+    <figure class="video">
+      <video controls preload="metadata" playsinline>
+        <source src="retargeting.mp4" type="video/mp4">
+        브라우저가 video 태그를 지원하지 않습니다.
+      </video>
+      <figcaption>Motion retargeting result.</figcaption>
+    </figure>
+
+    <figure class="video">
+      <video controls preload="metadata" playsinline>
+        <source src="retargeting_trials.mp4" type="video/mp4">
+        브라우저가 video 태그를 지원하지 않습니다.
+      </video>
+      <figcaption>Retargeting trials.</figcaption>
+    </figure>
+
+    <div class="publication">
+      <h3>Advanced AI R&amp;D Talent Development Program for the Sports Gaming Sector<span class="pub-meta"><i>JOYCITY, 2023</i></span></h3>
+      <p>Designed imitation learning rewards and validated algorithm performance through simulation.</p>
+    </div>
+  </div>
+
+  <div class="tab" id="awards">
     <h2>Patent</h2>
-    <ul class="plain">
-      <li>시각-언어 기반 파지 네트워크를 통한 물체 분류, 2026</li>
-    </ul>
-  </section>
+    <div class="publication">
+      <h3>시각-언어 기반 파지 네트워크를 통한 물체 분류<span class="pub-meta"><i>2026</i></span></h3>
+      <p>Object classification via a vision-language grasp network.</p>
+    </div>
 
-  <section>
-    <h2>Awards &amp; Activities</h2>
-    <ul class="plain">
-      <li>Presidential Award, 2024 ICIP &amp; Capstone Design Final Presentation Best Award, Dongguk University</li>
-      <li>Seolsong Scholarship (2 awards, 2024)</li>
-      <li>Academic Scholarship, Dongguk University (2022, 2024)</li>
-      <li>Tobigs 22nd — Machine Learning &amp; Big Data Analysis Society, Korea (Jul 2024 – Jul 2025)</li>
-    </ul>
-  </section>
+    <h2>Awards</h2>
+    <div class="publication">
+      <h3>Presidential Award, Capstone Design Final Presentation<span class="pub-meta"><i>2024</i></span></h3>
+      <p>Best award at 2024 ICIP &amp; Capstone Design, Dongguk University.</p>
+    </div>
 
-  <section>
-    <h2>Skills</h2>
-    <ul class="plain">
-      <li>Python, PyTorch, JAX, ROS2</li>
-      <li>Isaac Sim, MuJoCo</li>
-      <li>OPIc — Intermediate High (IH)</li>
-    </ul>
-  </section>
+    <h2>Activities</h2>
+    <div class="publication">
+      <h3>Tobigs 22nd<span class="pub-meta"><i>Jul 2024 &ndash; Jul 2025</i></span></h3>
+      <p>Machine Learning &amp; Big Data Analysis Society, Korea.</p>
+    </div>
+  </div>
 
-  <footer>
-    © 2026 Geunha Kim
-  </footer>
+  <p class="credit">
+    Template adapted from <a href="https://github.com/andyzeng/andyzeng.github.io">Andy Zeng's website</a>.
+  </p>
 
-</main>
+</div>
+
+<script>
+  // 해시(#publications / #projects)에 맞춰 아래쪽 탭만 교체. 기본값은 publications.
+  function showTab() {
+    var ids = ['publications', 'projects', 'awards'];
+    var want = location.hash.slice(1);
+    var id = ids.indexOf(want) >= 0 ? want : 'publications';
+    document.querySelectorAll('.tab').forEach(function (el) { el.hidden = (el.id !== id); });
+    document.querySelectorAll('#tabs a').forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+  window.addEventListener('hashchange', showTab);
+  showTab();
+</script>
 </body>
 </html>

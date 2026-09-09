@@ -1,0 +1,11 @@
+# 도구 설정
+.claude/
+
+# 원본 영상 — 압축본(retargeting*.mp4)만 배포합니다.
+# 한글 파일명은 OS 간 인코딩(NFC/NFD)이 달라 글롭이 어긋날 수 있어
+# mp4 를 전부 무시한 뒤 필요한 파일만 되살립니다.
+*.mp4
+!retargeting.mp4
+!retargeting_trials.mp4
+
+.DS_Store

@@ -1,0 +1,130 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Asap', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+               "Malgun Gothic", roboto, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #111111;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25em 2.5em;
+  /* 세로 flex + 크레딧의 margin-top:auto 조합으로,
+     내용이 짧아도 크레딧이 항상 페이지 맨 아래에 붙습니다. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.credit {
+  margin-top: auto;
+  padding-top: 4em;
+  margin-bottom: 0;
+  font-size: 10pt;
+  color: #a0a8b0;
+}
+
+a { text-decoration: none; color: rgb(20, 110, 190); }
+a:hover { text-decoration: underline; }
+i { font-style: italic; }
+p { margin-bottom: 1em; }
+
+h1 { font-size: 2.4em; line-height: 2.4em; font-weight: 500; }
+
+/* ---------- intro (index 전용) ---------- */
+/* align-items 기본값 stretch 덕분에 사진이 h1 위쪽부터
+   마지막 문단 아래까지 텍스트 높이에 맞춰 늘어납니다. */
+#intro { padding-top: 3em; display: flex; }
+#intro-text { max-width: 34em; }
+
+#intro-image {
+  margin: 2em 0 0 2em;
+  width: 20em;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0.3em;
+  align-self: flex-start;
+}
+/* 음수 마진으로 위쪽 20% 를 잘라냅니다. 정사각 원본이라
+   보이는 높이는 가로폭의 80% 가 됩니다. */
+#intro-image img {
+  width: 100%;
+  display: block;
+  margin-top: -20%;
+}
+
+/* ---------- 섹션 ---------- */
+.section { margin-top: 2em; }
+h2 { font-size: 1.15em; line-height: 1.75em; margin-bottom: 0.5em; }
+.note { color: #a0a8b0; }
+
+/* ---------- 가로 탭 메뉴 ---------- */
+#tabs {
+  margin-top: 2.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  gap: 1.5em;
+}
+#tabs a {
+  color: #a0a8b0;
+  font-size: 1.15em;
+  line-height: 1.75em;
+}
+#tabs a:hover { color: rgb(20, 110, 190); text-decoration: none; }
+#tabs a.active { color: #111111; font-weight: 600; }
+
+.tab { margin-top: 1.5em; }
+/* 탭 안의 소제목 — 그룹 사이 간격 */
+.tab h2 { margin-top: 1.75em; }
+.tab h2:first-child { margin-top: 0; }
+
+/* ---------- 논문 / 프로젝트 항목 ---------- */
+h3 {
+  font-size: .95em;
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
+  font-weight: 400;
+  display: flex;
+}
+.pub-meta {
+  margin-left: auto;
+  padding-left: 1em;
+  text-align: right;
+  white-space: nowrap;
+  color: #a0a8b0;
+}
+.publication { margin-bottom: 1em; }
+.publication p { margin-bottom: 0; color: #a0a8b0; }
+.publication p strong { font-weight: 600; color: #6b7280; }
+
+/* ---------- 영상 ---------- */
+.video {
+  margin: 0.75em 0 1.5em;
+  max-width: 42em;
+}
+.video video {
+  width: 100%;
+  border-radius: 0.3em;
+  background: #000;
+  display: block;
+}
+.video figcaption {
+  margin-top: 0.4em;
+  font-size: .9em;
+  color: #a0a8b0;
+}
+
+/* ---------- 모바일 ---------- */
+@media (max-width: 760px) {
+  #intro { flex-direction: column-reverse; }
+  #intro-text { max-width: none; }
+  #intro-image { margin: 0 0 1.5em 0; width: 14em; }
+  h3 { display: block; }
+  .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
+}
