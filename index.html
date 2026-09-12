@@ -1,161 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Geunha Kim</title>
-<meta name="description" content="Geunha Kim — M.S. student in Artificial Intelligence at Hanyang University. VLA models, sim-to-real transfer, robot manipulation.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🤖</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="main.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9K8HH9ZV2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-M9K8HH9ZV2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geunha Kim</title>
+  <meta name="description"
+    content="Geunha Kim — M.S. student in Artificial Intelligence at Hanyang University. VLA models, sim-to-real transfer, robot manipulation.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🤖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-<div id="main">
+  <div id="main">
 
-  <!-- ===== 고정 영역 : 탭을 눌러도 바뀌지 않습니다 ===== -->
-  <div id="intro">
-    <div id="intro-text">
-      <h1>Geunha Kim</h1>
-      <p>
-        I'm a master's student in Artificial Intelligence at
-        <a href="https://www.hanyang.ac.kr/">Hanyang University</a>,
-        where I work as a graduate researcher at
-        <a href="https://sites.google.com/view/hy-contopt">COLAB</a>.
-      </p>
-      <p>
-        Before that, I studied Multimedia Engineering at Dongguk University
-        &ndash; and along the way, was an undergraduate research assistant at
-        <a href="https://lmmlab.notion.site/">LMM Lab</a>.
-      </p>
-      <p>
-        My research interests are vision-language-action models,
-        sim-to-real transfer, and robot manipulation.
-      </p>
-      <p>
-        Find me on <a href="https://github.com/GnabryGna">GitHub</a>,
-        email me <a href="mailto:keunhaa9@gmail.com">here</a>,
-        or read my <a href="CV_MS_Geunhakim.pdf">CV</a>.
-      </p>
+    <!-- ===== 고정 영역 : 탭을 눌러도 바뀌지 않습니다 ===== -->
+    <div id="intro">
+      <div id="intro-text">
+        <h1>Geunha Kim</h1>
+        <p>
+          I'm a master's student in Artificial Intelligence at
+          <a href="https://www.hanyang.ac.kr/">Hanyang University</a>,
+          where I work as a graduate researcher at
+          <a href="https://sites.google.com/view/hy-contopt">COLAB</a>.
+        </p>
+        <p>
+          Before that, I studied Multimedia Engineering at Dongguk University
+          &ndash; and along the way, was an undergraduate research assistant at
+          <a href="https://lmmlab.notion.site/">LMM Lab</a>.
+        </p>
+        <p>
+          My research interests are vision-language-action models,
+          sim-to-real transfer, and robot manipulation.
+        </p>
+        <p>
+          Find me on <a href="https://github.com/GnabryGna">GitHub</a>,
+          email me <a href="mailto:keunhaa9@gmail.com">here</a>,
+          or read my <a href="CV_MS_Geunhakim.pdf">CV</a>.
+        </p>
+      </div>
+      <div id="intro-image">
+        <img src="Profile.jpeg" alt="Geunha Kim">
+      </div>
     </div>
-    <div id="intro-image">
-      <img src="Profile.jpeg" alt="Geunha Kim">
+
+    <nav id="tabs">
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards &amp; Activities</a>
+    </nav>
+
+    <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
+    <div class="tab" id="publications">
+      <p class="note">* denotes equal contribution.</p>
+
+      <div class="publication">
+        <h3>Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning<span
+            class="pub-meta"><i>Under review</i></span></h3>
+        <p><strong>G Kim</strong>, H Zhang, J Moon</p>
+      </div>
+
+      <div class="publication">
+        <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for
+          Long-Horizon Planning<span class="pub-meta"><i>Under review</i></span></h3>
+        <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
+      </div>
+
+      <div class="publication">
+        <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action
+          Models<span class="pub-meta"><i>Under review</i></span></h3>
+        <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
+      </div>
+
+      <div class="publication">
+        <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion
+          Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
+        <p>S An*, <strong>G Kim</strong>*, J Moon</p>
+      </div>
+
+      <div class="publication">
+        <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
+        <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
+      </div>
+
+      <div class="publication">
+        <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global
+          Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
+        <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
+      </div>
     </div>
+
+    <div class="tab" id="projects">
+      <div class="publication">
+        <h3>Autonomous Manipulation and Grasping via Imitation Learning with Visuo-Tactile Sensing<span
+            class="pub-meta"><i>KETI, 2025&ndash;2026</i></span></h3>
+        <p>Developed a VR-based bimanual teleoperation system, constructed a MuJoCo simulation environment, and verified
+          imitation learning datasets.</p>
+        <details class="videos">
+          <summary>Videos</summary>
+          <div class="video-row">
+            <figure class="square">
+              <video controls preload="metadata" playsinline>
+                <source src="retargeting.mp4" type="video/mp4">
+              </video>
+              <figcaption>Retargeting a human demonstration onto the robot, mapping the
+                operator&rsquo;s motion to the robot&rsquo;s joint configuration.</figcaption>
+            </figure>
+            <figure class="wide">
+              <video controls preload="metadata" playsinline>
+                <source src="retargeting_trials.mp4" type="video/mp4">
+              </video>
+              <figcaption>A sequence of retargeting trials recorded while developing the
+                teleoperation pipeline.</figcaption>
+            </figure>
+          </div>
+        </details>
+      </div>
+
+      <div class="publication">
+        <h3>Advanced AI R&amp;D Talent Development Program for the Sports Gaming Sector<span
+            class="pub-meta"><i>JOYCITY, 2023</i></span></h3>
+        <p>Designed imitation learning rewards and validated algorithm performance through simulation.</p>
+      </div>
+    </div>
+
+    <div class="tab" id="awards">
+      <h2>Patent</h2>
+      <div class="publication">
+        <h3>시각-언어 기반 파지 네트워크를 통한 물체 분류<span class="pub-meta"><i>2026</i></span></h3>
+        <p>Object classification via a vision-language grasp network.</p>
+      </div>
+
+      <h2>Awards</h2>
+      <div class="publication">
+        <h3>Presidential Award, Capstone Design Final Presentation<span class="pub-meta"><i>2024</i></span></h3>
+        <p>Best award at 2024 ICIP &amp; Capstone Design, Dongguk University.</p>
+      </div>
+
+      <h2>Activities</h2>
+      <div class="publication">
+        <h3>Tobigs 22nd<span class="pub-meta"><i>Jul 2024 &ndash; Jul 2025</i></span></h3>
+        <p>Machine Learning &amp; Big Data Analysis Society, Korea.</p>
+      </div>
+    </div>
+
+    <p class="credit">
+      Template adapted from <a href="https://github.com/andyzeng/andyzeng.github.io">Andy Zeng's website</a>.
+    </p>
+
   </div>
 
-  <nav id="tabs">
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#awards">Awards &amp; Activities</a>
-  </nav>
-
-  <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
-  <div class="tab" id="publications">
-    <p class="note">* denotes equal contribution.</p>
-
-    <div class="publication">
-      <h3>Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning<span class="pub-meta"><i>Under review</i></span></h3>
-      <p><strong>G Kim</strong>, H Zhang, J Moon</p>
-    </div>
-
-    <div class="publication">
-      <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for Long-Horizon Planning<span class="pub-meta"><i>Under review</i></span></h3>
-      <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
-    </div>
-
-    <div class="publication">
-      <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action Models<span class="pub-meta"><i>Under review</i></span></h3>
-      <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
-    </div>
-
-    <div class="publication">
-      <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
-      <p>S An*, <strong>G Kim</strong>*, J Moon</p>
-    </div>
-
-    <div class="publication">
-      <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
-      <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
-    </div>
-
-    <div class="publication">
-      <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
-      <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
-    </div>
-  </div>
-
-  <div class="tab" id="projects">
-    <div class="publication">
-      <h3>Autonomous Manipulation and Grasping via Imitation Learning with Visuo-Tactile Sensing<span class="pub-meta"><i>KETI, 2025&ndash;2026</i></span></h3>
-      <p>Developed a VR-based bimanual teleoperation system, constructed a MuJoCo simulation environment, and verified imitation learning datasets.</p>
-      <details class="videos">
-        <summary>Videos</summary>
-        <div class="video-row">
-          <figure class="square">
-            <video controls preload="metadata" playsinline>
-              <source src="retargeting.mp4" type="video/mp4">
-            </video>
-            <figcaption>Retargeting a human demonstration onto the robot, mapping the
-              operator&rsquo;s motion to the robot&rsquo;s joint configuration.</figcaption>
-          </figure>
-          <figure class="wide">
-            <video controls preload="metadata" playsinline>
-              <source src="retargeting_trials.mp4" type="video/mp4">
-            </video>
-            <figcaption>A sequence of retargeting trials recorded while developing the
-              teleoperation pipeline.</figcaption>
-          </figure>
-        </div>
-      </details>
-    </div>
-
-    <div class="publication">
-      <h3>Advanced AI R&amp;D Talent Development Program for the Sports Gaming Sector<span class="pub-meta"><i>JOYCITY, 2023</i></span></h3>
-      <p>Designed imitation learning rewards and validated algorithm performance through simulation.</p>
-    </div>
-  </div>
-
-  <div class="tab" id="awards">
-    <h2>Patent</h2>
-    <div class="publication">
-      <h3>시각-언어 기반 파지 네트워크를 통한 물체 분류<span class="pub-meta"><i>2026</i></span></h3>
-      <p>Object classification via a vision-language grasp network.</p>
-    </div>
-
-    <h2>Awards</h2>
-    <div class="publication">
-      <h3>Presidential Award, Capstone Design Final Presentation<span class="pub-meta"><i>2024</i></span></h3>
-      <p>Best award at 2024 ICIP &amp; Capstone Design, Dongguk University.</p>
-    </div>
-
-    <h2>Activities</h2>
-    <div class="publication">
-      <h3>Tobigs 22nd<span class="pub-meta"><i>Jul 2024 &ndash; Jul 2025</i></span></h3>
-      <p>Machine Learning &amp; Big Data Analysis Society, Korea.</p>
-    </div>
-  </div>
-
-  <p class="credit">
-    Template adapted from <a href="https://github.com/andyzeng/andyzeng.github.io">Andy Zeng's website</a>.
-  </p>
-
-</div>
-
-<script>
-  // 해시(#publications / #projects)에 맞춰 아래쪽 탭만 교체. 기본값은 publications.
-  function showTab() {
-    var ids = ['publications', 'projects', 'awards'];
-    var want = location.hash.slice(1);
-    var id = ids.indexOf(want) >= 0 ? want : 'publications';
-    document.querySelectorAll('.tab').forEach(function (el) { el.hidden = (el.id !== id); });
-    document.querySelectorAll('#tabs a').forEach(function (a) {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-    });
-  }
-  window.addEventListener('hashchange', showTab);
-  showTab();
-</script>
+  <script>
+    // 해시(#publications / #projects)에 맞춰 아래쪽 탭만 교체. 기본값은 publications.
+    function showTab() {
+      var ids = ['publications', 'projects', 'awards'];
+      var want = location.hash.slice(1);
+      var id = ids.indexOf(want) >= 0 ? want : 'publications';
+      document.querySelectorAll('.tab').forEach(function (el) { el.hidden = (el.id !== id); });
+      document.querySelectorAll('#tabs a').forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    }
+    window.addEventListener('hashchange', showTab);
+    showTab();
+  </script>
 </body>
+
 </html>
