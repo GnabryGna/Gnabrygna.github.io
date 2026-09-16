@@ -151,18 +151,46 @@ h3 {
   margin-left: 1.5em;
 }
 
+/* 논문은 저자줄 오른쪽, 과제는 한글 원제 오른쪽에 토글을 붙입니다.
+   열리면 전체 폭을 차지하며 항목 맨 아래로 내려갑니다.
+   Playground 는 기존대로 설명 아래에 그대로 둡니다. */
+#publications > .publication,
+#projects > .publication {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+#publications > .publication > h3,
+#projects > .publication > h3 { flex: 1 0 100%; }
+#publications > .publication > p { flex: 0 1 auto; }
+
+/* details 의 박스를 없애 summary 와 패널이 각각 flex 항목이 되게 합니다.
+   덕분에 summary 는 저자줄 옆에 고정되고, 패널만 아래 전체 폭으로 펼쳐집니다. */
+#publications > .publication > .videos,
+#projects > .publication > .videos { display: contents; }
+#publications > .publication > .videos > summary,
+#projects > .publication > .videos > summary { flex: 0 0 auto; margin-left: 1.5em; }
+#publications > .publication > .videos > .panel,
+#projects > .publication > .videos > .panel { flex: 1 0 100%; margin-left: 1.5em; }
+
+/* 과제: 영문 설명은 한 줄 전체, 한글 원제 옆에 토글이 붙습니다.
+   DOM 순서가 곧 화면 순서라 order 재배치가 필요 없습니다. */
+#projects > .publication > p:not(.ko) { flex: 1 0 100%; }
+#projects > .publication > p.ko { flex: 0 1 auto; }
+
 /* ---------- 영상 토글 ---------- */
 .videos { margin-top: 0.75em; }
 /* 열렸을 때만 옅은 배경으로 범위를 묶어줍니다. 파란 계열은
    텍스트 선택 하이라이트처럼 보여서 중립적인 웜 그레이를 씁니다. */
-.videos[open] {
+.panel {
   background: #f7f6f3;
   border-radius: 0.5em;
   padding: 0.75em 1em 1em;
-  margin-bottom: 1em;
+  margin: 0.5em 0 1em;
 }
-.videos[open] > .video-row:first-of-type,
-.videos[open] > .figure-grid:first-of-type { margin-top: 0.75em; }
+.videos:not([open]) > .panel { display: none; }
+.panel > .video-row:first-child,
+.panel > .figure-grid:first-child { margin-top: 0; }
 .videos summary {
   cursor: pointer;
   color: rgb(20, 110, 190);
@@ -189,7 +217,7 @@ h3 {
 .video-row .wide   { flex: 16 1 0; }
 .video-row .square { flex:  9 1 0; }
 /* 하나뿐이면 늘리지 않고 원래 크기 그대로 */
-.video-row figure:only-child { flex: 0 0 42.66em; }
+.video-row figure:only-child { flex: 0 0 48em; }
 
 .video-row video {
   width: 100%;
@@ -229,6 +257,13 @@ h3 {
   max-width: 56em;
 }
 .figure-grid figure { margin: 0; }
+.figure-grid video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3em;
+  background: #000;
+  display: block;
+}
 .figure-grid img {
   width: 100%;
   height: auto;
