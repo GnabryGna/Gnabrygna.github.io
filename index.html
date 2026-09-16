@@ -62,7 +62,8 @@
     <nav id="tabs">
       <a href="#publications">Publications</a>
       <a href="#projects">Projects</a>
-      <a href="#awards">Awards &amp; Activities</a>
+      <a href="#playground">Playground</a>
+      <a href="#awards">Activity</a>
     </nav>
 
     <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
@@ -81,13 +82,24 @@
         <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
         <details class="videos">
           <summary>Video</summary>
+          <div class="figure-grid">
+            <figure>
+              <img src="gcvla/figure1_4.png" alt="Long-horizon task rollout" loading="lazy">
+              <figcaption>The long-horizon task &mdash; &ldquo;Take the frying pan from the
+                cabinet and place it on the hotplate.&rdquo;</figcaption>
+            </figure>
+          </div>
           <div class="video-row">
+            <figure class="square">
+              <img src="gcvla/figure5.png" alt="Hardware setup" loading="lazy">
+              <figcaption>Hardware setup: a Franka Emika arm and a stereo camera facing the
+                kitchen bench.</figcaption>
+            </figure>
             <figure class="wide">
               <video controls loop preload="metadata" playsinline>
                 <source src="gcvla/inference.mp4" type="video/mp4">
               </video>
-              <figcaption>Inference rollout of the goal-conditioned policy on a
-                long-horizon task.</figcaption>
+              <figcaption>Inference rollout of the goal-conditioned policy.</figcaption>
             </figure>
           </div>
         </details>
@@ -189,18 +201,18 @@
     <div class="tab" id="projects">
       <div class="publication">
         <h3>Autonomous Manipulation and Grasping via Imitation Learning with Visuo-Tactile Sensing<span
-            class="pub-meta"><i>KETI, 2025&ndash;2026</i></span></h3>
+            class="pub-meta"><i>KETI (COLAB), 2025&ndash;2026</i></span></h3>
+        <p class="ko">시촉각 센싱기반 모방학습에 의한 자율조작파지 기술개발</p>
         <p>Developed a VR-based bimanual teleoperation system, constructed a MuJoCo simulation environment, and verified
           imitation learning datasets.</p>
         <details class="videos">
           <summary>Videos</summary>
           <div class="video-row">
-            <figure class="square">
+            <figure class="wide">
               <video controls loop preload="metadata" playsinline>
-                <source src="keti/retargeting.mp4" type="video/mp4">
+                <source src="keti/test_2object.mp4" type="video/mp4">
               </video>
-              <figcaption>Retargeting a human demonstration onto the robot, mapping the
-                operator&rsquo;s motion to the robot&rsquo;s joint configuration.</figcaption>
+              <figcaption>Inference on a two-object manipulation task.</figcaption>
             </figure>
             <figure class="wide">
               <video controls loop preload="metadata" playsinline>
@@ -210,13 +222,98 @@
                 teleoperation pipeline.</figcaption>
             </figure>
           </div>
+          <div class="video-row">
+            <figure class="crop">
+              <video controls loop preload="metadata" playsinline>
+                <source src="keti/retargeting.mp4" type="video/mp4">
+              </video>
+              <figcaption>Retargeting a human demonstration onto the robot, mapping the
+                operator&rsquo;s motion to the robot&rsquo;s joint configuration.</figcaption>
+            </figure>
+          </div>
         </details>
       </div>
 
       <div class="publication">
         <h3>Advanced AI R&amp;D Talent Development Program for the Sports Gaming Sector<span
-            class="pub-meta"><i>JOYCITY, 2023</i></span></h3>
+            class="pub-meta"><i>JOYCITY (LMM Lab), 2023</i></span></h3>
+        <p class="ko">스포츠 게임 분야 첨단 AI 기술 R&amp;D 전문인력 양성</p>
         <p>Designed imitation learning rewards and validated algorithm performance through simulation.</p>
+      </div>
+    </div>
+
+    <div class="tab" id="playground">
+      <p class="note">Things I built while teaching myself VLA models and robot control.</p>
+
+      <div class="publication">
+        <h3>Pick-and-place inference with &pi;<sub>0</sub><span class="pub-meta"><i>2025</i></span></h3>
+        <p>Took Physical Intelligence&rsquo;s
+          <a href="https://www.physicalintelligence.company/blog/pi0">&pi;<sub>0</sub></a>
+          for a spin on a few pick-and-place tasks, just to see what it does out of the box.</p>
+        <details class="videos">
+          <summary>Videos</summary>
+          <div class="video-row">
+          <figure class="wide">
+            <video controls loop preload="metadata" playsinline>
+              <source src="project1_pi0/pick_two_cans.mp4" type="video/mp4">
+            </video>
+            <figcaption>Picking up two cans (8&times; speed).</figcaption>
+          </figure>
+          <figure class="wide">
+            <video controls loop preload="metadata" playsinline>
+              <source src="project1_pi0/pick_orange_can.mp4" type="video/mp4">
+            </video>
+            <figcaption>Orange can, successful grasp (8&times; speed).</figcaption>
+          </figure>
+          <figure class="wide">
+            <video controls loop preload="metadata" playsinline>
+              <source src="project1_pi0/pick_black_can.mp4" type="video/mp4">
+            </video>
+            <figcaption>Black can to PET bottle (8&times; speed).</figcaption>
+          </figure>
+          </div>
+        </details>
+      </div>
+
+      <div class="publication">
+        <h3>Dragging manipulation with a diffusion policy<span class="pub-meta"><i>2025</i></span></h3>
+        <p>Wanted to see how far a diffusion policy could get on dragging, so I
+          pointed one at a Robotiq 2F-85 gripper and let it try.</p>
+        <details class="videos">
+          <summary>Video</summary>
+          <div class="video-row">
+          <figure class="wide">
+            <video controls loop preload="metadata" playsinline>
+              <source src="project1_pi0/drag.mp4" type="video/mp4">
+            </video>
+            <figcaption>Dragging trial with the 2F-85 gripper (4&times; speed).</figcaption>
+          </figure>
+          </div>
+        </details>
+      </div>
+
+      <div class="publication">
+        <h3>Building tasks with teleoperation<span class="pub-meta"><i>2025</i></span></h3>
+        <p>Got on the controls myself and built a couple of tasks from scratch &mdash; setting
+          a table, then folding a shirt &mdash; to get a feel for what teleoperated data
+          collection actually takes.</p>
+        <details class="videos">
+          <summary>Videos</summary>
+          <div class="video-row">
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="project1_pi0/table.mp4" type="video/mp4">
+              </video>
+              <figcaption>Teleoperated table setup.</figcaption>
+            </figure>
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="project1_pi0/fold_shirt.mp4" type="video/mp4">
+              </video>
+              <figcaption>Teleoperated shirt folding.</figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
     </div>
 
@@ -233,7 +330,7 @@
         <p>Best award at 2024 ICIP &amp; Capstone Design, Dongguk University.</p>
       </div>
 
-      <h2>Activities</h2>
+      <h2>Societies</h2>
       <div class="publication">
         <h3>Tobigs 22nd<span class="pub-meta"><i>Jul 2024 &ndash; Jul 2025</i></span></h3>
         <p>Machine Learning &amp; Big Data Analysis Society, Korea.</p>
@@ -249,7 +346,7 @@
   <script>
     // 해시(#publications / #projects)에 맞춰 아래쪽 탭만 교체. 기본값은 publications.
     function showTab() {
-      var ids = ['publications', 'projects', 'awards'];
+      var ids = ['publications', 'projects', 'playground', 'awards'];
       var want = location.hash.slice(1);
       var id = ids.indexOf(want) >= 0 ? want : 'publications';
       document.querySelectorAll('.tab').forEach(function (el) { el.hidden = (el.id !== id); });
