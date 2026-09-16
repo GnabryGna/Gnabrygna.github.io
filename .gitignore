@@ -1,11 +1,22 @@
 # 도구 설정
 .claude/
 
-# 원본 영상 — 압축본(retargeting*.mp4)만 배포합니다.
-# 한글 파일명은 OS 간 인코딩(NFC/NFD)이 달라 글롭이 어긋날 수 있어
-# mp4 를 전부 무시한 뒤 필요한 파일만 되살립니다.
+# 원본 영상 — 웹용 압축본만 배포합니다.
+# 한글 파일명은 OS 간 인코딩(NFC/NFD)이 달라 글롭이 어긋날 수 있어,
+# mp4 를 전부 무시한 뒤 필요한 파일만 이름으로 되살립니다.
 *.mp4
-!retargeting.mp4
-!retargeting_trials.mp4
+!keti/retargeting.mp4
+!keti/retargeting_trials.mp4
+!gcvla/inference.mp4
+!iccas_2025/red_green.mp4
+!iccas_2025/yellow_blue.mp4
+!ijcas/video_1.mp4
+!ijcas/video_2.mp4
+!ijcas/video_3.mp4
+!iccas_2026/video.mp4
+
+# 페이지에 쓰지 않는 그림
+a3net/a3net_intro2.png
+a3net/a3net_architecture.png
 
 .DS_Store

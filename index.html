@@ -79,29 +79,110 @@
         <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for
           Long-Horizon Planning<span class="pub-meta"><i>Under review</i></span></h3>
         <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
+        <details class="videos">
+          <summary>Video</summary>
+          <div class="video-row">
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="gcvla/inference.mp4" type="video/mp4">
+              </video>
+              <figcaption>Inference rollout of the goal-conditioned policy on a
+                long-horizon task.</figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
 
       <div class="publication">
         <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action
           Models<span class="pub-meta"><i>Under review</i></span></h3>
         <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
+        <details class="videos">
+          <summary>Videos</summary>
+          <div class="video-row">
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="ijcas/video_1.mp4" type="video/mp4">
+              </video>
+              <figcaption>Dexterous hand control rollout 1.</figcaption>
+            </figure>
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="ijcas/video_2.mp4" type="video/mp4">
+              </video>
+              <figcaption>Dexterous hand control rollout 2.</figcaption>
+            </figure>
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="ijcas/video_3.mp4" type="video/mp4">
+              </video>
+              <figcaption>Dexterous hand control rollout 3.</figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
 
       <div class="publication">
         <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion
           Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
         <p>S An*, <strong>G Kim</strong>*, J Moon</p>
+        <details class="videos">
+          <summary>Video</summary>
+          <div class="video-row">
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="iccas_2026/video.mp4" type="video/mp4">
+              </video>
+              <figcaption>Visuomotor manipulation rollouts of the world-model conditioned
+                diffusion policy.</figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
 
       <div class="publication">
         <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
         <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
+        <details class="videos">
+          <summary>Videos</summary>
+          <div class="video-row">
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="iccas_2025/red_green.mp4" type="video/mp4">
+              </video>
+              <figcaption>Grasping the red and green objects (20&times; speed).</figcaption>
+            </figure>
+            <figure class="wide">
+              <video controls loop preload="metadata" playsinline>
+                <source src="iccas_2025/yellow_blue.mp4" type="video/mp4">
+              </video>
+              <figcaption>Grasping the yellow and blue objects (20&times; speed).</figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
 
       <div class="publication">
         <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global
           Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
         <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
+        <details class="videos">
+          <summary>Figures</summary>
+          <div class="figure-grid">
+            <figure>
+              <img src="a3net/a3net_intro1.png" alt="Challenging driving scenarios that motivate adaptive ROI extraction." loading="lazy">
+              <figcaption>Similarity maps, global feature maps and detections &mdash; uniform sampling vs. the proposed AAAM, and with vs. without embedding alignment.</figcaption>
+            </figure>
+            <figure>
+              <img src="a3net/a3net_result1.png" alt="Lane detection results across challenging scenarios." loading="lazy">
+              <figcaption>Qualitative comparison against CLRNet and CLRerNet across daylight, night and crowded scenes.</figcaption>
+            </figure>
+            <figure>
+              <img src="a3net/a3net_result2.png" alt="Comparison against the baseline." loading="lazy">
+              <figcaption>Attention maps for ground truth, CLRerNet and A3-Net on occluded lanes.</figcaption>
+            </figure>
+          </div>
+        </details>
       </div>
     </div>
 
@@ -115,15 +196,15 @@
           <summary>Videos</summary>
           <div class="video-row">
             <figure class="square">
-              <video controls preload="metadata" playsinline>
-                <source src="retargeting.mp4" type="video/mp4">
+              <video controls loop preload="metadata" playsinline>
+                <source src="keti/retargeting.mp4" type="video/mp4">
               </video>
               <figcaption>Retargeting a human demonstration onto the robot, mapping the
                 operator&rsquo;s motion to the robot&rsquo;s joint configuration.</figcaption>
             </figure>
             <figure class="wide">
-              <video controls preload="metadata" playsinline>
-                <source src="retargeting_trials.mp4" type="video/mp4">
+              <video controls loop preload="metadata" playsinline>
+                <source src="keti/retargeting_trials.mp4" type="video/mp4">
               </video>
               <figcaption>A sequence of retargeting trials recorded while developing the
                 teleoperation pipeline.</figcaption>
@@ -178,6 +259,17 @@
     }
     window.addEventListener('hashchange', showTab);
     showTab();
+
+    // 토글을 열면 안의 영상을 재생하고, 닫으면 멈춥니다.
+    // 자동재생은 음소거 상태에서만 허용되므로 muted 로 시작합니다.
+    document.querySelectorAll('details.videos').forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        d.querySelectorAll('video').forEach(function (v) {
+          if (d.open) { v.muted = true; v.play().catch(function () {}); }
+          else { v.pause(); v.currentTime = 0; }
+        });
+      });
+    });
   </script>
 </body>
 

@@ -121,6 +121,7 @@ h3 {
 /* 제목이 번호 뒤에서 시작하므로, 저자줄과 하위 요소도 같은 만큼 들여씁니다. */
 #publications > .publication > p,
 #projects > .publication > p,
+#publications > .publication > .videos,
 #projects > .publication > .videos {
   padding-left: 1.5em;
 }
@@ -144,22 +145,53 @@ h3 {
   gap: 1em;
   justify-content: center;
   margin: 1em 0 0.5em;
-  flex-wrap: wrap;
+  max-width: 56em;
 }
-.video-row figure { margin: 0; }
-.video-row .square { width: 16em; }        /* 좌우를 잘라 정사각 */
-.video-row .wide   { width: 28.44em; }     /* 16em x 16/9 */
+.video-row figure { margin: 0; min-width: 0; }
+
+/* 영상이 여러 개면 한 줄에 들어가도록 폭을 나눠 갖습니다.
+   flex-grow 를 가로세로비에 비례시키면 높이가 저절로 맞습니다. */
+.video-row .wide   { flex: 16 1 0; }
+.video-row .square { flex:  9 1 0; }
+/* 하나뿐이면 늘리지 않고 원래 크기 그대로 */
+.video-row figure:only-child { flex: 0 0 42.66em; }
+
 .video-row video {
   width: 100%;
-  height: 16em;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 0.3em;
   background: #000;
   display: block;
 }
+/* 좌우를 잘라 정사각. object-position 을 50% 보다 낮추면
+   크롭 창이 왼쪽으로 옮겨가 왼쪽이 더 보입니다. */
+.video-row .square video { aspect-ratio: 1 / 1; object-position: 45% center; }
 .video-row figcaption {
   margin-top: 0.4em;
   font-size: .9em;
+  color: #a0a8b0;
+}
+
+/* ---------- 그림 (한 줄에 한 장) ---------- */
+.figure-grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* 한 줄에 한 장, 본문 폭 최대 */
+  gap: 1.5em;
+  margin: 1em 0 0.5em;
+  max-width: 56em;
+}
+.figure-grid figure { margin: 0; }
+.figure-grid img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.3em;
+  display: block;
+}
+.figure-grid figcaption {
+  margin-top: 0.4em;
+  font-size: .85em;
   color: #a0a8b0;
 }
 
@@ -168,9 +200,9 @@ h3 {
   #intro { flex-direction: column-reverse; }
   #intro-text { max-width: none; }
   #intro-image { margin: 0 0 1.5em 0; width: 14em; height: 14em; }
-  .video-row .square, .video-row .wide { width: 100%; }
-  .video-row video { height: auto; aspect-ratio: 16 / 9; }
-  .video-row .square video { aspect-ratio: 1 / 1; }
+  .video-row { flex-wrap: wrap; }
+  .video-row .wide, .video-row .square,
+  .video-row figure:only-child { flex: 1 1 100%; }
   h3 { display: block; }
   .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
 }
