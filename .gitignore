@@ -14,9 +14,18 @@
 !ijcas/video_2.mp4
 !ijcas/video_3.mp4
 !iccas_2026/video.mp4
+!project1_pi0/drag.mp4
+!project1_pi0/table.mp4
+!project1_pi0/pick_black_can.mp4
+!project1_pi0/pick_orange_can.mp4
+!project1_pi0/pick_two_cans.mp4
+!project1_pi0/fold_shirt.mp4
+!keti/test_2object.mp4
 
 # 페이지에 쓰지 않는 그림
 a3net/a3net_intro2.png
+gcvla/Figure1_4.png
+gcvla/Figure5.png
 a3net/a3net_architecture.png
 
 .DS_Store

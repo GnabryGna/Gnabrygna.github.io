@@ -106,11 +106,14 @@ h3 {
 .publication { margin-bottom: 1em; }
 .publication p { margin-bottom: 0; color: #a0a8b0; }
 .publication p strong { font-weight: 600; color: #6b7280; }
+/* 과제 한글 원제 */
+.publication p.ko { font-size: .85em; margin-bottom: 0.4em; }
 
 /* ---------- 번호 매기기 (논문 / 프로젝트만) ---------- */
-#publications, #projects { counter-reset: item; }
+#publications, #projects, #playground { counter-reset: item; }
 #publications > .publication > h3::before,
-#projects > .publication > h3::before {
+#projects > .publication > h3::before,
+#playground > .publication > h3::before {
   counter-increment: item;
   content: counter(item) ".";
   display: inline-block;
@@ -121,13 +124,27 @@ h3 {
 /* 제목이 번호 뒤에서 시작하므로, 저자줄과 하위 요소도 같은 만큼 들여씁니다. */
 #publications > .publication > p,
 #projects > .publication > p,
-#publications > .publication > .videos,
-#projects > .publication > .videos {
+#playground > .publication > p {
   padding-left: 1.5em;
+}
+/* 토글은 열렸을 때 배경 패널이 되므로 안쪽 여백 대신 바깥 여백으로 들여씁니다. */
+#publications > .publication > .videos,
+#projects > .publication > .videos,
+#playground > .publication > .videos {
+  margin-left: 1.5em;
 }
 
 /* ---------- 영상 토글 ---------- */
 .videos { margin-top: 0.75em; }
+/* 열렸을 때만 옅은 하늘색 배경으로 범위를 눈에 띄게 묶어줍니다. */
+.videos[open] {
+  background: #f1f7fd;
+  border-radius: 0.5em;
+  padding: 0.75em 1em 1em;
+  margin-bottom: 1em;
+}
+.videos[open] > .video-row:first-of-type,
+.videos[open] > .figure-grid:first-of-type { margin-top: 0.75em; }
 .videos summary {
   cursor: pointer;
   color: rgb(20, 110, 190);
@@ -167,6 +184,19 @@ h3 {
 /* 좌우를 잘라 정사각. object-position 을 50% 보다 낮추면
    크롭 창이 왼쪽으로 옮겨가 왼쪽이 더 보입니다. */
 .video-row .square video { aspect-ratio: 1 / 1; object-position: 45% center; }
+
+/* 영상 줄 안에 그림이 섞일 때도 같은 규칙으로 높이를 맞춥니다. */
+.video-row img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.3em;
+  display: block;
+}
+.video-row .square img { aspect-ratio: 1 / 1; }
+.video-row .wide img   { aspect-ratio: 16 / 9; }
+/* 정사각에서 좌우로 20% 씩 넓힌 크롭 (1 : 1.4) */
+.video-row .crop   { flex: 12.6 1 0; }
+.video-row .crop video { aspect-ratio: 7 / 5; object-position: 45% center; }
 .video-row figcaption {
   margin-top: 0.4em;
   font-size: .9em;
