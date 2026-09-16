@@ -153,9 +153,10 @@ h3 {
 
 /* ---------- 영상 토글 ---------- */
 .videos { margin-top: 0.75em; }
-/* 열렸을 때만 옅은 하늘색 배경으로 범위를 눈에 띄게 묶어줍니다. */
+/* 열렸을 때만 옅은 배경으로 범위를 묶어줍니다. 파란 계열은
+   텍스트 선택 하이라이트처럼 보여서 중립적인 웜 그레이를 씁니다. */
 .videos[open] {
-  background: #f1f7fd;
+  background: #f7f6f3;
   border-radius: 0.5em;
   padding: 0.75em 1em 1em;
   margin-bottom: 1em;
