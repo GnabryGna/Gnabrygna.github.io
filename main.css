@@ -67,6 +67,23 @@ h1 { font-size: 2.4em; line-height: 2.4em; font-weight: 500; }
 h2 { font-size: 1.15em; line-height: 1.75em; margin-bottom: 0.5em; }
 .note { color: #a0a8b0; }
 
+/* ---------- 도구 / 장비 ---------- */
+#kit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5em;
+  max-width: 56em;
+}
+#kit dl {
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  row-gap: 0.6em;
+  margin: 0;
+  font-size: 1.05em;
+}
+#kit dt { color: #a0a8b0; }
+#kit dd { margin: 0; }
+
 /* ---------- 가로 탭 메뉴 ---------- */
 #tabs {
   margin-top: 2.5em;
@@ -227,6 +244,7 @@ h3 {
 
 /* ---------- 모바일 ---------- */
 @media (max-width: 760px) {
+  #kit { grid-template-columns: 1fr; gap: 1.5em; }
   #intro { flex-direction: column-reverse; }
   #intro-text { max-width: none; }
   #intro-image { margin: 0 0 1.5em 0; width: 14em; height: 14em; }

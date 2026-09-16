@@ -40,7 +40,8 @@
           <a href="https://sites.google.com/view/hy-contopt">COLAB</a>.
         </p>
         <p>
-          Before that, I studied Multimedia Engineering at Dongguk University
+          Before that, I studied Multimedia Engineering at
+          <a href="https://www.dongguk.edu/">Dongguk University</a>
           &ndash; and along the way, was an undergraduate research assistant at
           <a href="https://lmmlab.notion.site/">LMM Lab</a>.
         </p>
@@ -64,6 +65,7 @@
       <a href="#projects">Projects</a>
       <a href="#playground">Playground</a>
       <a href="#awards">Activity</a>
+      <a href="#tools">Tools</a>
     </nav>
 
     <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
@@ -337,6 +339,37 @@
       </div>
     </div>
 
+    <div class="tab" id="tools">
+      <div id="kit">
+        <section>
+          <h2>Software</h2>
+          <dl>
+            <dt>Languages</dt>
+            <dd>Python &middot; C &middot; C++</dd>
+            <dt>Frameworks</dt>
+            <dd>PyTorch &middot; JAX</dd>
+            <dt>Simulators</dt>
+            <dd>Isaac Sim &middot; MuJoCo</dd>
+            <dt>Middleware</dt>
+            <dd>ROS 2</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Hardware</h2>
+          <dl>
+            <dt>Manipulators</dt>
+            <dd>Franka Research 3 &middot; Doosan A0509</dd>
+            <dt>Hands</dt>
+            <dd>Allegro Hand V4 &middot; Robotiq 2F-85</dd>
+            <dt>Cameras</dt>
+            <dd>ZED 2i &middot; ZED Mini &middot; Intel RealSense</dd>
+            <dt>VR</dt>
+            <dd>Apple Vision Pro</dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+
     <p class="credit">
       Template adapted from <a href="https://github.com/andyzeng/andyzeng.github.io">Andy Zeng's website</a>.
     </p>
@@ -346,7 +379,7 @@
   <script>
     // 해시(#publications / #projects)에 맞춰 아래쪽 탭만 교체. 기본값은 publications.
     function showTab() {
-      var ids = ['publications', 'projects', 'playground', 'awards'];
+      var ids = ['publications', 'projects', 'playground', 'awards', 'tools'];
       var want = location.hash.slice(1);
       var id = ids.indexOf(want) >= 0 ? want : 'publications';
       document.querySelectorAll('.tab').forEach(function (el) { el.hidden = (el.id !== id); });
