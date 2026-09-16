@@ -21,11 +21,18 @@
 !project1_pi0/pick_two_cans.mp4
 !project1_pi0/fold_shirt.mp4
 !keti/test_2object.mp4
+!a3net/demo1.mp4
+!a3net/demo2.mp4
+
+# 원본 GIF (웹용 mp4 만 배포)
+*.gif
 
 # 페이지에 쓰지 않는 그림
 a3net/a3net_intro2.png
 gcvla/Figure1_4.png
 gcvla/Figure5.png
+gcvla/figure1_4.png
+gcvla/figure5.png
 a3net/a3net_architecture.png
 
 .DS_Store
