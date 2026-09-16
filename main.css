@@ -216,9 +216,6 @@ h3 {
    flex-grow 를 가로세로비에 비례시키면 높이가 저절로 맞습니다. */
 .video-row .wide   { flex: 16 1 0; }
 .video-row .square { flex:  9 1 0; }
-/* 하나뿐이면 늘리지 않고 원래 크기 그대로 */
-.video-row figure:only-child { flex: 0 0 48em; }
-
 .video-row video {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -283,8 +280,7 @@ h3 {
   #intro-text { max-width: none; }
   #intro-image { margin: 0 0 1.5em 0; width: 14em; height: 14em; }
   .video-row { flex-wrap: wrap; }
-  .video-row .wide, .video-row .square,
-  .video-row figure:only-child { flex: 1 1 100%; }
+  .video-row .wide, .video-row .square { flex: 1 1 100%; }
   h3 { display: block; }
   .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
 }
