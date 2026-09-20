@@ -31,6 +31,9 @@
 
     <!-- ===== 고정 영역 : 탭을 눌러도 바뀌지 않습니다 ===== -->
     <div id="intro">
+      <div id="intro-image">
+        <img src="Profile.jpeg" alt="Geunha Kim">
+      </div>
       <div id="intro-text">
         <h1>Geunha Kim</h1>
         <p>
@@ -46,17 +49,17 @@
           <a href="https://lmmlab.notion.site/" target="_blank" rel="noopener noreferrer">LMM Lab</a>.
         </p>
         <p>
-          My research interests are vision-language-action models,
-          sim-to-real transfer, and robot manipulation.
+          My research interests are VLA, sim2real transfer, and robotic manipulation.
+        </p>
+        <p>
+          I&rsquo;m currently looking for job opportunities. If you think there might be a
+          fit, please do reach out &mdash; I&rsquo;d be glad to hear from you.
         </p>
         <p>
           Find me on <a href="https://github.com/GnabryGna" target="_blank" rel="noopener noreferrer">GitHub</a>,
           email me <a href="mailto:keunhaa9@gmail.com">here</a>,
           or read my <a href="CV_MS_Geunhakim.pdf" target="_blank" rel="noopener noreferrer">CV</a>.
         </p>
-      </div>
-      <div id="intro-image">
-        <img src="Profile.jpeg" alt="Geunha Kim">
       </div>
     </div>
 
@@ -67,6 +70,7 @@
       <a href="#awards">Activity</a>
       <a href="#tools">Tools</a>
     </nav>
+    <div id="tabbar"><span></span></div>
 
     <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
     <div class="tab" id="publications">
@@ -406,7 +410,20 @@
         a.classList.toggle('active', a.getAttribute('href') === '#' + id);
       });
     }
-    window.addEventListener('hashchange', showTab);
+    // 탭 줄이 가로로 넘칠 때, 아래 막대가 스크롤 위치를 보여줍니다.
+  var tabs = document.getElementById('tabs');
+  var bar = document.getElementById('tabbar');
+  function updateBar() {
+    var ratio = tabs.clientWidth / tabs.scrollWidth;
+    bar.classList.toggle('full', ratio >= 0.999);
+    bar.firstElementChild.style.width = (ratio * 100) + '%';
+    bar.firstElementChild.style.left = (tabs.scrollLeft / tabs.scrollWidth * 100) + '%';
+  }
+  tabs.addEventListener('scroll', updateBar);
+  window.addEventListener('resize', updateBar);
+  updateBar();
+
+  window.addEventListener('hashchange', showTab);
     showTab();
 
     // 토글을 열면 안의 영상을 재생하고, 닫으면 멈춥니다.
