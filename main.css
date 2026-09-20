@@ -90,7 +90,8 @@ h2 { font-size: 1.15em; line-height: 1.75em; margin-bottom: 0.5em; }
   padding-bottom: 0.5em;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
-  gap: 1.5em;
+  flex-wrap: wrap;      /* 폭이 모자라면 어느 크기에서든 접힙니다 */
+  gap: 0.4em 1.5em;
 }
 #tabs a {
   color: #a0a8b0;
@@ -283,4 +284,19 @@ h3 {
   .video-row .wide, .video-row .square { flex: 1 1 100%; }
   h3 { display: block; }
   .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
+
+  /* 탭 5개는 한 줄에 못 들어가므로 접히게 합니다. */
+  #tabs { flex-wrap: wrap; gap: 0.4em 1.1em; }
+
+  h1 { font-size: 1.9em; line-height: 1.3; }
+  #main { padding: 0 1em 2.5em; }
+
+  /* 좁은 화면에서는 들여쓰기와 안쪽 여백이 내용 폭을 크게 깎습니다. */
+  .panel { padding: 0.75em; }
+  #publications > .publication > .videos > .panel,
+  #projects > .publication > .videos > .panel { margin-left: 0; }
+
+  /* 라벨을 값 위로 올려 값이 전체 폭을 씁니다. */
+  #kit dl { grid-template-columns: 1fr; row-gap: 0; }
+  #kit dd { margin-bottom: 0.6em; }
 }
