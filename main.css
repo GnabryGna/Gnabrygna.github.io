@@ -156,8 +156,9 @@ h3 {
 .publication p.ko { font-size: .85em; margin-bottom: 0.4em; }
 
 /* ---------- 번호 매기기 (논문 / 프로젝트만) ---------- */
-#publications, #projects, #playground { counter-reset: item; }
-/* Playground 는 소제목마다 번호를 1 부터 다시 셉니다. */
+#publications, #projects { counter-reset: item; }
+/* Playground 는 소제목마다 1 부터 다시 셉니다. 부모에도 초기화를 걸면
+   범위가 겹쳐 어긋나므로, 소제목에만 겁니다. */
 #playground > h2 { counter-reset: item; }
 #publications > .publication > h3::before,
 #projects > .publication > h3::before,
