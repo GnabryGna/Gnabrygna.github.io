@@ -348,7 +348,7 @@ h3 {
     margin: 0;
     /* margin 은 칸 폭을 늘려 이름까지 밀어냅니다.
        transform 은 레이아웃을 건드리지 않아 사진만 움직입니다. */
-    transform: translateX(2em);
+    transform: translateX(1em);
   }
 
   h1 { font-size: 1.7em; line-height: 1.3; }
