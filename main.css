@@ -135,6 +135,9 @@ h3 {
   font-weight: 400;
   display: flex;
 }
+/* h3 가 flex 라 텍스트 사이 공백이 사라집니다. 여백을 직접 줍니다. */
+.abbr { margin-left: 0.4em; }
+
 .pub-meta {
   margin-left: auto;
   padding-left: 1em;
@@ -144,7 +147,8 @@ h3 {
   font-style: italic;
 }
 /* 심사 중 표시는 한 단계 더 연하게 */
-.pub-meta.review { color: #a0a8b0; }
+.pub-meta.review,
+.pub-meta.upcoming { color: #a0a8b0; }
 .publication { margin-bottom: 1em; }
 .publication p { margin-bottom: 0; color: #a0a8b0; }
 .publication p strong { font-weight: 600; color: #6b7280; }
@@ -153,6 +157,8 @@ h3 {
 
 /* ---------- 번호 매기기 (논문 / 프로젝트만) ---------- */
 #publications, #projects, #playground { counter-reset: item; }
+/* Playground 는 소제목마다 번호를 1 부터 다시 셉니다. */
+#playground > h2 { counter-reset: item; }
 #publications > .publication > h3::before,
 #projects > .publication > h3::before,
 #playground > .publication > h3::before {
@@ -278,6 +284,8 @@ h3 {
   max-width: 56em;
 }
 .figure-grid figure { margin: 0; }
+/* 학회 사진은 두 장씩 */
+.figure-grid.photos { grid-template-columns: repeat(2, 1fr); }
 .figure-grid video {
   width: 100%;
   height: auto;
@@ -305,6 +313,7 @@ h3 {
   #playground > .publication > p { padding-left: 0; }
   #playground > .publication > .videos { margin-left: 0; }
 
+  .figure-grid.photos { grid-template-columns: 1fr; }
   #kit { grid-template-columns: 1fr; gap: 1.5em; }
   #intro-text { max-width: none; }
   .video-row { flex-wrap: wrap; }
