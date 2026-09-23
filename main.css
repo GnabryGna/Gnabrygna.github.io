@@ -299,6 +299,9 @@ h3 {
 
 /* ---------- 모바일 ---------- */
 @media (max-width: 760px) {
+  /* 좁은 화면에서는 저자줄 들여쓰기를 없애 폭을 확보합니다. */
+  #publications > .publication > p { padding-left: 0; }
+
   #kit { grid-template-columns: 1fr; gap: 1.5em; }
   #intro-text { max-width: none; }
   .video-row { flex-wrap: wrap; }
