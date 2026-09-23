@@ -35,4 +35,8 @@ gcvla/figure1_4.png
 gcvla/figure5.png
 a3net/a3net_architecture.png
 
+# 학회 사진 원본 (웹용 conference/*.jpg 만 배포)
+conference/*/
+tobigs/IMG_*
+
 .DS_Store
