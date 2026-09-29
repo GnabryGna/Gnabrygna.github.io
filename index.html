@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="main.css?v=24">
+  <link rel="stylesheet" href="main.css?v=31">
 </head>
 
 <body>
@@ -35,35 +35,23 @@
         <img src="Profile.jpeg" alt="Geunha Kim">
       </div>
       <div id="intro-text">
-        <h1>Geunha Kim (김근하)</h1>
+        <h1>Geunha Kim (김근하)<span id="lang-switch"><button type="button" data-set="en" aria-label="English" title="English">🇺🇸</button><button type="button" data-set="ko" aria-label="한국어" title="한국어">🇰🇷</button></span></h1>
         <p class="pron">[Pronunciation: &ldquo;gna-kim&rdquo; (&ldquo;gna&rdquo; as in &ldquo;gnabry&rdquo;)]</p>
-        <p class="tagline">Korean 🇰🇷</p>
-        <p>
-          Hi! I'm a master's student in Artificial Intelligence at
+        <p class="tagline"><span data-lang="en">Korean 🇰🇷</span><span data-lang="ko">한국인 🇰🇷</span></p>
+        <p><span data-lang="en">Hi! I'm a master's student in Artificial Intelligence at
           <a href="https://www.hanyang.ac.kr/" target="_blank" rel="noopener noreferrer">Hanyang University</a>,
           where I work as a graduate researcher at
           <a href="https://sites.google.com/view/hy-contopt" target="_blank" rel="noopener noreferrer">COLAB</a>,
           advised by
-          <a href="https://junmoony.github.io/" target="_blank" rel="noopener noreferrer">Prof. Jun Moon</a>.
-        </p>
-        <p>
-          Before that, I studied Multimedia Engineering at
+          <a href="https://junmoony.github.io/" target="_blank" rel="noopener noreferrer">Prof. Jun Moon</a>.</span><span data-lang="ko">안녕하세요! <a href="https://www.hanyang.ac.kr/" target="_blank" rel="noopener noreferrer">한양대학교</a> 인공지능학과 석사과정 학생으로, <a href="https://junmoony.github.io/" target="_blank" rel="noopener noreferrer">문준 교수님</a>의 지도 아래 <a href="https://sites.google.com/view/hy-contopt" target="_blank" rel="noopener noreferrer">COLAB</a>에서 연구하고 있습니다.</span></p>
+        <p><span data-lang="en">Before that, I studied Multimedia Engineering at
           <a href="https://www.dongguk.edu/" target="_blank" rel="noopener noreferrer">Dongguk University</a>
           &ndash; and along the way, was an undergraduate research assistant at
-          <a href="https://lmmlab.notion.site/" target="_blank" rel="noopener noreferrer">LMM Lab</a>.
-        </p>
-        <p>
-          My research interests are VLA, sim2real transfer, and robotic manipulation.
-        </p>
-        <p>
-          I&rsquo;m currently looking for job opportunities. If you think there might be a
-          fit, please do reach out &mdash; I&rsquo;d be glad to hear from you.
-        </p>
-        <p>
-          Find me on <a href="https://github.com/GnabryGna" target="_blank" rel="noopener noreferrer">GitHub</a>,
-          email me <a href="mailto:keunhaa9@gmail.com">here</a>,
-          or read my <a href="CV_MS_Geunhakim.pdf" target="_blank" rel="noopener noreferrer">CV</a>.
-        </p>
+          <a href="https://lmmlab.notion.site/" target="_blank" rel="noopener noreferrer">LMM Lab</a>.</span><span data-lang="ko">그 전에는 <a href="https://www.dongguk.edu/" target="_blank" rel="noopener noreferrer">동국대학교</a> 멀티미디어공학과에서 공부하며 <a href="https://lmmlab.notion.site/" target="_blank" rel="noopener noreferrer">LMM Lab</a>에서 학부연구생으로 활동했습니다.</span></p>
+        <p><span data-lang="en">My research interests are VLA, sim2real transfer, and robotic manipulation.</span><span data-lang="ko">주요 연구 관심사는 VLA, sim2real transfer, 로봇 매니퓰레이션입니다.</span></p>
+        <p><span data-lang="en">I&rsquo;m currently looking for job opportunities. If you think there might be a
+          fit, please do reach out &mdash; I&rsquo;d be glad to hear from you.</span><span data-lang="ko">현재 취업 기회를 찾고 있습니다. 함께할 수 있는 자리가 있다면 편하게 연락 주세요.</span></p>
+        <p class="links"><a href="https://github.com/GnabryGna" target="_blank" rel="noopener noreferrer">GitHub</a><span class="sep">|</span><a href="mailto:keunhaa9@gmail.com">E-mail</a><span class="sep">|</span><a href="CV_MS_Geunhakim.pdf" target="_blank" rel="noopener noreferrer">CV</a></p>
       </div>
     </div>
 
@@ -79,17 +67,19 @@
 
     <!-- ===== 이 아래만 탭에 따라 교체됩니다 ===== -->
     <div class="tab" id="publications">
-      <p class="note">* denotes equal contribution.</p>
+      <p class="note"><span data-lang="en">* denotes equal contribution.</span><span data-lang="ko">* 표시는 동등 기여 저자입니다.</span></p>
 
       <div class="publication">
         <h3>Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning<span
             class="pub-meta review"><i>Under review</i></span></h3>
+        <p class="desc"><span data-lang="en">Transfers role-aligned, object-centric representations from simulation to learn value functions that hold up on real robots.</span><span data-lang="ko">시뮬레이션에서 학습한 역할 정렬(role-aligned) 객체 중심 표현을 실제 환경으로 전이한 가치 함수 학습</span></p>
         <p><strong>G Kim</strong>, H Zhang, J Moon</p>
       </div>
 
       <div class="publication">
         <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for
           Long-Horizon Planning<span class="pub-meta review"><i>Under review</i></span></h3>
+        <p class="desc"><span data-lang="en">Adds reward-free goal-conditioned reinforcement learning to a VLA model so it can carry out long-horizon tasks.</span><span data-lang="ko">보상 없는 goal-conditioned 강화학습을 결합한 VLA 모델의 long-horizon 과제 수행</span></p>
         <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
         <details class="videos">
           <summary>Video</summary>
@@ -99,8 +89,8 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="gcvla/inference.mp4" type="video/mp4">
                 </video>
-                <figcaption>Inference rollout of the goal-conditioned policy on the
-                  long-horizon task.</figcaption>
+                <figcaption><span data-lang="en">Inference rollout of the goal-conditioned policy on the
+                  long-horizon task.</span><span data-lang="ko">Long-horizon 과제에서 goal-conditioned 정책의 추론 롤아웃</span></figcaption>
               </figure>
             </div>
           </div>
@@ -110,6 +100,7 @@
       <div class="publication">
         <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action
           Models<span class="pub-meta review"><i>Under review</i></span></h3>
+        <p class="desc"><span data-lang="en">Learns intent-guided action representations to improve dexterous hand control in VLA models.</span><span data-lang="ko">의도(intent) 기반 행동 표현 학습을 통한 VLA 모델의 덱스터러스 핸드 제어</span></p>
         <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
         <details class="videos">
           <summary>Videos</summary>
@@ -119,19 +110,19 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="ijcas/video_1.mp4" type="video/mp4">
                 </video>
-                <figcaption>Dexterous hand control rollout 1.</figcaption>
+                <figcaption><span data-lang="en">Dexterous hand control rollout 1.</span><span data-lang="ko">덱스터러스 핸드 제어 롤아웃 1</span></figcaption>
               </figure>
               <figure class="wide">
                 <video controls loop preload="metadata" playsinline>
                   <source src="ijcas/video_2.mp4" type="video/mp4">
                 </video>
-                <figcaption>Dexterous hand control rollout 2.</figcaption>
+                <figcaption><span data-lang="en">Dexterous hand control rollout 2.</span><span data-lang="ko">덱스터러스 핸드 제어 롤아웃 2</span></figcaption>
               </figure>
               <figure class="wide">
                 <video controls loop preload="metadata" playsinline>
                   <source src="ijcas/video_3.mp4" type="video/mp4">
                 </video>
-                <figcaption>Dexterous hand control rollout 3.</figcaption>
+                <figcaption><span data-lang="en">Dexterous hand control rollout 3.</span><span data-lang="ko">덱스터러스 핸드 제어 롤아웃 3</span></figcaption>
               </figure>
             </div>
             </div>
@@ -141,6 +132,7 @@
       <div class="publication">
         <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion
           Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
+        <p class="desc"><span data-lang="en">Conditions a diffusion policy on a world model that predicts dynamics, improving visuomotor manipulation.</span><span data-lang="ko">동역학 예측 월드 모델로 조건화한 diffusion policy 기반 시각-운동 매니퓰레이션</span></p>
         <p>S An*, <strong>G Kim</strong>*, J Moon</p>
         <details class="videos">
           <summary>Video</summary>
@@ -150,8 +142,8 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="iccas_2026/video.mp4" type="video/mp4">
                 </video>
-                <figcaption>Visuomotor manipulation rollouts of the world-model conditioned
-                  diffusion policy.</figcaption>
+                <figcaption><span data-lang="en">Visuomotor manipulation rollouts of the world-model conditioned
+                  diffusion policy.</span><span data-lang="ko">월드 모델 조건부 diffusion policy의 시각-운동 매니퓰레이션 롤아웃</span></figcaption>
               </figure>
             </div>
             </div>
@@ -160,6 +152,7 @@
 
       <div class="publication">
         <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
+        <p class="desc"><span data-lang="en">Uses a VLA-based grasp network to classify objects from visual and language input.</span><span data-lang="ko">VLA 기반 파지 네트워크를 이용한 시각·언어 입력 물체 분류</span></p>
         <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
         <details class="videos">
           <summary>Videos</summary>
@@ -169,13 +162,13 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="iccas_2025/red_green.mp4" type="video/mp4">
                 </video>
-                <figcaption>Grasping the red and green objects (20&times; speed).</figcaption>
+                <figcaption><span data-lang="en">Grasping the red and green objects (20&times; speed).</span><span data-lang="ko">빨간색·초록색 물체 파지 (20배속)</span></figcaption>
               </figure>
               <figure class="wide">
                 <video controls loop preload="metadata" playsinline>
                   <source src="iccas_2025/yellow_blue.mp4" type="video/mp4">
                 </video>
-                <figcaption>Grasping the yellow and blue objects (20&times; speed).</figcaption>
+                <figcaption><span data-lang="en">Grasping the yellow and blue objects (20&times; speed).</span><span data-lang="ko">노란색·파란색 물체 파지 (20배속)</span></figcaption>
               </figure>
             </div>
             </div>
@@ -185,6 +178,7 @@
       <div class="publication">
         <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global
           Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
+        <p class="desc"><span data-lang="en">Improves lane detection in challenging scenes with adaptive anchor aggregation and unified local&ndash;global embedding alignment.</span><span data-lang="ko">적응적 앵커 집계와 지역-전역 임베딩 정렬을 통한 까다로운 주행 환경에서의 차선 검출</span></p>
         <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
         <details class="videos">
           <summary>Videos &amp; figures</summary>
@@ -194,25 +188,25 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="a3net/demo1.mp4" type="video/mp4">
                 </video>
-                <figcaption>Lane detection on a congested multi-lane road.</figcaption>
+                <figcaption><span data-lang="en">Lane detection on a congested multi-lane road.</span><span data-lang="ko">혼잡한 다차선 도로에서의 차선 검출</span></figcaption>
               </figure>
               <figure>
                 <video controls loop preload="metadata" playsinline>
                   <source src="a3net/demo2.mp4" type="video/mp4">
                 </video>
-                <figcaption>Lane detection on a tree-lined road under heavy shadow.</figcaption>
+                <figcaption><span data-lang="en">Lane detection on a tree-lined road under heavy shadow.</span><span data-lang="ko">그림자가 짙은 가로수길에서의 차선 검출</span></figcaption>
               </figure>
               <figure>
                 <img src="a3net/a3net_intro1.png" alt="Challenging driving scenarios that motivate adaptive ROI extraction." loading="lazy">
-                <figcaption>Similarity maps, global feature maps and detections &mdash; uniform sampling vs. the proposed AAAM, and with vs. without embedding alignment.</figcaption>
+                <figcaption><span data-lang="en">Similarity maps, global feature maps and detections &mdash; uniform sampling vs. the proposed AAAM, and with vs. without embedding alignment.</span><span data-lang="ko">유사도 맵, 전역 특징 맵, 검출 결과 &mdash; 균일 샘플링 대비 제안 기법(AAAM), 임베딩 정렬 유무 비교</span></figcaption>
               </figure>
               <figure>
                 <img src="a3net/a3net_result1.png" alt="Lane detection results across challenging scenarios." loading="lazy">
-                <figcaption>Qualitative comparison against CLRNet and CLRerNet across daylight, night and crowded scenes.</figcaption>
+                <figcaption><span data-lang="en">Qualitative comparison against CLRNet and CLRerNet across daylight, night and crowded scenes.</span><span data-lang="ko">주간·야간·혼잡 상황에서 CLRNet, CLRerNet과의 정성적 비교</span></figcaption>
               </figure>
               <figure>
                 <img src="a3net/a3net_result2.png" alt="Comparison against the baseline." loading="lazy">
-                <figcaption>Attention maps for ground truth, CLRerNet and A3-Net on occluded lanes.</figcaption>
+                <figcaption><span data-lang="en">Attention maps for ground truth, CLRerNet and A3-Net on occluded lanes.</span><span data-lang="ko">가려진 차선에서 정답, CLRerNet, A3-Net의 어텐션 맵</span></figcaption>
               </figure>
             </div>
             </div>
@@ -224,8 +218,8 @@
       <div class="publication">
         <h3>Autonomous Manipulation and Grasping via Imitation Learning with Visuo-Tactile Sensing<span
             class="pub-meta"><i>KETI (COLAB), 2025&ndash;2026</i></span></h3>
-        <p>Developed a VR-based bimanual teleoperation system, constructed a MuJoCo simulation environment, and verified
-          imitation learning datasets.</p>
+        <p><span data-lang="en">Developed a VR-based bimanual teleoperation system, constructed a MuJoCo simulation environment, and verified
+          imitation learning datasets.</span><span data-lang="ko">VR 기반 양팔 원격조작 시스템을 개발하고, MuJoCo 시뮬레이션 환경을 구축했으며, 모방학습 데이터셋을 검증했습니다.</span></p>
         <p class="ko">시촉각 센싱기반 모방학습에 의한 자율조작파지 기술개발</p>
         <details class="videos">
           <summary>Videos</summary>
@@ -235,14 +229,14 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="keti/test_2object.mp4" type="video/mp4">
                 </video>
-                <figcaption>Inference on a two-object manipulation task.</figcaption>
+                <figcaption><span data-lang="en">Inference on a two-object manipulation task.</span><span data-lang="ko">두 물체 조작 과제 추론</span></figcaption>
               </figure>
               <figure class="wide">
                 <video controls loop preload="metadata" playsinline>
                   <source src="keti/retargeting_trials.mp4" type="video/mp4">
                 </video>
-                <figcaption>A sequence of retargeting trials recorded while developing the
-                  teleoperation pipeline.</figcaption>
+                <figcaption><span data-lang="en">A sequence of retargeting trials recorded while developing the
+                  teleoperation pipeline.</span><span data-lang="ko">원격조작 파이프라인을 개발하며 기록한 리타게팅 시도</span></figcaption>
               </figure>
             </div>
             <div class="video-row">
@@ -250,8 +244,8 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="keti/retargeting.mp4" type="video/mp4">
                 </video>
-                <figcaption>Retargeting a human demonstration onto the robot, mapping the
-                  operator&rsquo;s motion to the robot&rsquo;s joint configuration.</figcaption>
+                <figcaption><span data-lang="en">Retargeting a human demonstration onto the robot, mapping the
+                  operator&rsquo;s motion to the robot&rsquo;s joint configuration.</span><span data-lang="ko">사람의 시연을 로봇으로 리타게팅해, 조작자의 동작을 로봇 관절 구성에 매핑</span></figcaption>
               </figure>
             </div>
             </div>
@@ -261,7 +255,7 @@
       <div class="publication">
         <h3>Advanced AI R&amp;D Talent Development Program for the Sports Gaming Sector<span
             class="pub-meta"><i>JOYCITY (LMM Lab), 2023</i></span></h3>
-        <p>Designed imitation learning rewards and validated algorithm performance through simulation.</p>
+        <p><span data-lang="en">Designed imitation learning rewards and validated algorithm performance through simulation.</span><span data-lang="ko">모방학습 보상을 설계하고, 시뮬레이션으로 알고리즘 성능을 검증했습니다.</span></p>
         <p class="ko">스포츠 게임 분야 첨단 AI 기술 R&amp;D 전문인력 양성</p>
         <details class="videos">
           <summary>Video</summary>
@@ -271,7 +265,7 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="joycity/online_learning.mp4" type="video/mp4">
                 </video>
-                <figcaption>Online learning in progress.</figcaption>
+                <figcaption><span data-lang="en">Online learning in progress.</span><span data-lang="ko">온라인 학습 진행 중</span></figcaption>
               </figure>
             </div>
           </div>
@@ -283,9 +277,9 @@
       <h2>Teleoperation</h2>
       <div class="publication">
         <h3>Building tasks with teleoperation<span class="pub-meta"><i>2025</i></span></h3>
-        <p>Got on the controls myself and built a couple of tasks from scratch &mdash; setting
+        <p><span data-lang="en">Got on the controls myself and built a couple of tasks from scratch &mdash; setting
           a table, then folding a shirt &mdash; to get a feel for what teleoperated data
-          collection actually takes.</p>
+          collection actually takes.</span><span data-lang="ko">직접 조종기를 잡고 테이블 세팅과 셔츠 개기 과제를 처음부터 만들어 보며, 원격조작 데이터 수집이 실제로 어떤 일인지 감을 잡았습니다.</span></p>
         <details class="videos">
           <summary>Videos</summary>
             <div class="panel">
@@ -294,13 +288,13 @@
                 <video controls loop preload="metadata" playsinline>
                   <source src="project1_pi0/table.mp4" type="video/mp4">
                 </video>
-                <figcaption>Teleoperated table setup.</figcaption>
+                <figcaption><span data-lang="en">Teleoperated table setup.</span><span data-lang="ko">원격조작 테이블 세팅</span></figcaption>
               </figure>
               <figure class="wide">
                 <video controls loop preload="metadata" playsinline>
                   <source src="project1_pi0/fold_shirt.mp4" type="video/mp4">
                 </video>
-                <figcaption>Teleoperated shirt folding.</figcaption>
+                <figcaption><span data-lang="en">Teleoperated shirt folding.</span><span data-lang="ko">원격조작 셔츠 개기</span></figcaption>
               </figure>
             </div>
             </div>
@@ -310,9 +304,9 @@
       <h2>Robot Learning</h2>
       <div class="publication">
         <h3>Pick-and-place inference with &pi;<sub>0</sub><span class="pub-meta"><i>2025</i></span></h3>
-        <p>Took Physical Intelligence&rsquo;s
+        <p><span data-lang="en">Took Physical Intelligence&rsquo;s
           <a href="https://www.physicalintelligence.company/blog/pi0" target="_blank" rel="noopener noreferrer">&pi;<sub>0</sub></a>
-          for a spin on a few pick-and-place tasks, just to see what it does out of the box.</p>
+          for a spin on a few pick-and-place tasks, just to see what it does out of the box.</span><span data-lang="ko">Physical Intelligence의 <a href="https://www.physicalintelligence.company/blog/pi0" target="_blank" rel="noopener noreferrer">&pi;<sub>0</sub></a>를 몇 가지 pick-and-place 과제에 돌려보며, 별도 튜닝 없이 어디까지 되는지 확인해 봤습니다.</span></p>
         <details class="videos">
           <summary>Videos</summary>
             <div class="panel">
@@ -321,19 +315,19 @@
               <video controls loop preload="metadata" playsinline>
                 <source src="project1_pi0/pick_two_cans.mp4" type="video/mp4">
               </video>
-              <figcaption>Picking up two cans (8&times; speed).</figcaption>
+              <figcaption><span data-lang="en">Picking up two cans (8&times; speed).</span><span data-lang="ko">캔 두 개 집기 (8배속)</span></figcaption>
             </figure>
             <figure class="wide">
               <video controls loop preload="metadata" playsinline>
                 <source src="project1_pi0/pick_orange_can.mp4" type="video/mp4">
               </video>
-              <figcaption>Orange can, successful grasp (8&times; speed).</figcaption>
+              <figcaption><span data-lang="en">Orange can, successful grasp (8&times; speed).</span><span data-lang="ko">주황색 캔 파지 성공 (8배속)</span></figcaption>
             </figure>
             <figure class="wide">
               <video controls loop preload="metadata" playsinline>
                 <source src="project1_pi0/pick_black_can.mp4" type="video/mp4">
               </video>
-              <figcaption>Black can to PET bottle (8&times; speed).</figcaption>
+              <figcaption><span data-lang="en">Black can to PET bottle (8&times; speed).</span><span data-lang="ko">검은 캔 &rarr; 페트병 (8배속)</span></figcaption>
             </figure>
             </div>
             </div>
@@ -342,10 +336,10 @@
 
       <div class="publication">
         <h3>Dragging manipulation with a diffusion policy<span class="pub-meta"><i>2025</i></span></h3>
-        <p>Wanted to see how far a
+        <p><span data-lang="en">Wanted to see how far a
           <a href="https://diffusion-policy.cs.columbia.edu/" target="_blank" rel="noopener noreferrer">diffusion policy</a>
           could get on dragging, so I
-          pointed one at a Robotiq 2F-85 gripper and let it try.</p>
+          pointed one at a Robotiq 2F-85 gripper and let it try.</span><span data-lang="ko"><a href="https://diffusion-policy.cs.columbia.edu/" target="_blank" rel="noopener noreferrer">Diffusion policy</a>가 드래깅을 어디까지 해낼 수 있는지 궁금해서, Robotiq 2F-85 그리퍼에 직접 적용해 봤습니다.</span></p>
         <details class="videos">
           <summary>Video</summary>
             <div class="panel">
@@ -354,7 +348,7 @@
               <video controls loop preload="metadata" playsinline>
                 <source src="project1_pi0/drag.mp4" type="video/mp4">
               </video>
-              <figcaption>Dragging trial with the 2F-85 gripper (4&times; speed).</figcaption>
+              <figcaption><span data-lang="en">Dragging trial with the 2F-85 gripper (4&times; speed).</span><span data-lang="ko">2F-85 그리퍼 드래깅 시도 (4배속)</span></figcaption>
             </figure>
             </div>
             </div>
@@ -365,8 +359,8 @@
     <div class="tab" id="awards">
       <h2>Society</h2>
       <div class="publication">
-        <h3>Tobigs 22nd<span class="pub-meta"><i>Jul 2024 &ndash; Jul 2025</i></span></h3>
-        <p>Operations Director at a machine learning and big data analysis society in Korea.</p>
+        <h3><span data-lang="en">Tobigs 22nd</span><span data-lang="ko">투빅스 22기</span><span class="pub-meta"><i>Jul 2024 &ndash; Jul 2025</i></span></h3>
+        <p><span data-lang="en">Operations Director at a machine learning and big data analysis society in Korea.</span><span data-lang="ko">머신러닝·빅데이터 분석 학회 운영부장</span></p>
         <details class="videos">
           <summary>Photos</summary>
           <div class="panel">
@@ -382,24 +376,24 @@
         </details>
       </div>
       <div class="publication">
-        <h3>Student Council, Dongguk University<span class="pub-meta"><i>2019</i></span></h3>
-        <p>Member of the Network Division.</p>
+        <h3><span data-lang="en">Student Council, Dongguk University</span><span data-lang="ko">동국대학교 총학생회</span><span class="pub-meta"><i>2019</i></span></h3>
+        <p><span data-lang="en">Member of the Network Division.</span><span data-lang="ko">네트워크국 국원</span></p>
       </div>
 
       <h2>Conference</h2>
       <div class="publication">
         <h3>IEEE Transportation Electrification Conference &amp; Expo, Asia-Pacific<span class="abbr">(ITEC-AP 2026)</span><span class="pub-meta upcoming"><i>Dec 2026</i></span></h3>
-        <p>Upcoming &mdash; presenting one paper.</p>
+        <p><span data-lang="en">Upcoming &mdash; presenting one paper.</span><span data-lang="ko">예정 &mdash; 논문 1편 발표</span></p>
       </div>
 
       <div class="publication">
         <h3>International Conference on Control, Automation and Systems<span class="abbr">(ICCAS 2026)</span><span class="pub-meta upcoming"><i>Oct 2026</i></span></h3>
-        <p>Upcoming &mdash; presenting two papers.</p>
+        <p><span data-lang="en">Upcoming &mdash; presenting two papers.</span><span data-lang="ko">예정 &mdash; 논문 2편 발표</span></p>
       </div>
 
       <div class="publication">
         <h3>International Conference on Control, Automation and Systems<span class="abbr">(ICCAS 2025)</span><span class="pub-meta"><i>Nov 2025</i></span></h3>
-        <p>Presented a paper.</p>
+        <p><span data-lang="en">Presented a paper.</span><span data-lang="ko">논문 1편 발표</span></p>
         <details class="videos">
           <summary>Photos</summary>
           <div class="panel">
@@ -417,7 +411,7 @@
 
       <div class="publication">
         <h3>IEEE/RSJ International Conference on Intelligent Robots and Systems<span class="abbr">(IROS 2025)</span><span class="pub-meta"><i>Oct 2025</i></span></h3>
-        <p>Attended.</p>
+        <p><span data-lang="en">Attended.</span><span data-lang="ko">참석</span></p>
         <details class="videos">
           <summary>Photos</summary>
           <div class="panel">
@@ -435,7 +429,7 @@
 
       <div class="publication">
         <h3>International Conference on Learning Representations<span class="abbr">(ICLR 2025)</span><span class="pub-meta"><i>Apr 2025</i></span></h3>
-        <p>Attended.</p>
+        <p><span data-lang="en">Attended.</span><span data-lang="ko">참석</span></p>
         <details class="videos">
           <summary>Photos</summary>
           <div class="panel">
@@ -456,13 +450,13 @@
       <h2>Patent</h2>
       <div class="publication">
         <h3>시각-언어 기반 파지 네트워크를 통한 물체 분류<span class="pub-meta"><i>2026</i></span></h3>
-        <p>Object classification via a vision-language grasp network.</p>
+        <p><span data-lang="en">Object classification via a vision-language grasp network.</span><span data-lang="ko">시각-언어 파지 네트워크를 이용한 물체 분류</span></p>
       </div>
 
       <h2>Award</h2>
       <div class="publication">
         <h3>Presidential Award, Capstone Design Final Presentation<span class="pub-meta"><i>2024</i></span></h3>
-        <p>Best award at 2024 ICIP &amp; Capstone Design, Dongguk University.</p>
+        <p><span data-lang="en">Best award at 2024 ICIP &amp; Capstone Design, Dongguk University.</span><span data-lang="ko">2024 동국대학교 ICIP &amp; 캡스톤디자인 최우수상</span></p>
         <details class="videos">
           <summary>Photos</summary>
           <div class="panel">
@@ -505,9 +499,7 @@
       </div>
     </div>
 
-    <p class="credit">
-      Template adapted from <a href="https://github.com/andyzeng/andyzeng.github.io" target="_blank" rel="noopener noreferrer">Andy Zeng's website</a>.
-    </p>
+    <p class="credit"><span data-lang="en">Template adapted from <a href="https://github.com/andyzeng/andyzeng.github.io" target="_blank" rel="noopener noreferrer">Andy Zeng's website</a>.</span><span data-lang="ko">템플릿 출처: <a href="https://github.com/andyzeng/andyzeng.github.io" target="_blank" rel="noopener noreferrer">Andy Zeng의 웹사이트</a></span></p>
 
   </div>
 
@@ -522,6 +514,20 @@
         a.classList.toggle('active', a.getAttribute('href') === '#' + id);
       });
     }
+    // EN / 한국어 전환. 선택은 브라우저에 기억해 둡니다 (기본은 영어).
+    var langBtns = document.querySelectorAll('#lang-switch button');
+    function setLang(l) {
+      document.documentElement.lang = l;
+      langBtns.forEach(function (b) { b.classList.toggle('active', b.dataset.set === l); });
+      try { localStorage.setItem('lang', l); } catch (e) {}
+    }
+    langBtns.forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.dataset.set); });
+    });
+    var savedLang;
+    try { savedLang = localStorage.getItem('lang'); } catch (e) {}
+    setLang(savedLang === 'ko' ? 'ko' : 'en');
+
     // 탭 줄이 가로로 넘칠 때, 아래 막대가 스크롤 위치를 보여줍니다.
   var tabs = document.getElementById('tabs');
   var bar = document.getElementById('tabbar');
