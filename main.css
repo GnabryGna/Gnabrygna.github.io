@@ -360,7 +360,6 @@ h3 {
 
   /* 좁은 화면에서는 들여쓰기를 모두 없애 폭을 확보합니다. */
   #publications > .publication > p,
-  #projects > .publication > p,
   #playground > .publication > p { padding-left: 0; }
   #playground > .publication > .videos { margin-left: 0; }
 
@@ -371,6 +370,9 @@ h3 {
   .video-row .wide, .video-row .square { flex: 1 1 100%; }
   h3 { display: block; }
   .pub-meta { display: block; padding-left: 0; text-align: left; white-space: normal; }
+  /* 과제는 제목 줄바꿈, 기관, 설명이 모두 번호 뒤 같은 선에서 시작합니다. */
+  #projects > .publication > h3 { padding-left: 1.5em; }
+  #projects > .publication > h3::before { margin-left: -1.5em; }
 
   #tabs { gap: 1.2em; }
 
