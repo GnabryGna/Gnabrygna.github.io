@@ -174,6 +174,8 @@ h3 {
 }
 /* h3 가 flex 라 텍스트 사이 공백이 사라집니다. 여백을 직접 줍니다. */
 .abbr { margin-left: 0.4em; }
+/* Honor: 제목 오른쪽에 붙는 설명 */
+.h-desc { margin-left: 0.4em; color: #a0a8b0; }
 
 .pub-meta {
   margin-left: auto;
@@ -249,6 +251,13 @@ h3 {
    DOM 순서가 곧 화면 순서라 order 재배치가 필요 없습니다. */
 #projects > .publication > p:not(.ko) { flex: 1 0 100%; }
 #projects > .publication > p.ko { flex: 0 1 auto; }
+
+/* Activity: 설명 오른쪽에 Photos 토글을 붙이고, 사진은 아래 전체 폭으로 펼칩니다. */
+#awards > .publication { display: flex; flex-wrap: wrap; align-items: baseline; }
+#awards > .publication > h3 { flex: 1 0 100%; }
+#awards > .publication > .videos { display: contents; }
+#awards > .publication > .videos > summary { flex: 0 0 auto; margin-left: 1.5em; }
+#awards > .publication > .videos > .panel { flex: 1 0 100%; }
 /* 한글 원제는 글자가 작아(.85em) em 들여쓰기도 같이 줄어듭니다. 위 줄과 같은 폭으로 맞춥니다. */
 #projects > .publication > p.ko { padding-left: calc(1.5em / .85); }
 
