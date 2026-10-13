@@ -41,3 +41,6 @@ tobigs/IMG_*
 a3net/IMG_*
 
 .DS_Store
+
+# 논문 원고 (공개하지 않음)
+papers/

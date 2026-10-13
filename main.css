@@ -232,7 +232,9 @@ h3 {
 #projects > .publication > h3 { flex: 1 0 100%; }
 #publications > .publication > p { flex: 0 1 auto; font-style: italic; }   /* 저자줄 */
 /* 논문 설명: 한 줄 전체, 저자줄과 달리 정체 */
-#publications > .publication > p.desc { flex: 1 0 100%; font-style: normal; margin-bottom: .2em; }
+#publications > .publication > p.desc { flex: 1 0 100%; font-style: normal; margin: .5em 0 .2em; color: #7c848e; }
+/* 설명 위 TL;DR 소제목 */
+.tldr { margin-right: .5em; color: rgb(20, 110, 190); font-weight: 600; }
 
 /* details 의 박스를 없애 summary 와 패널이 각각 flex 항목이 되게 합니다.
    덕분에 summary 는 저자줄 옆에 고정되고, 패널만 아래 전체 폭으로 펼쳐집니다. */

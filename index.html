@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="main.css?v=33">
+  <link rel="stylesheet" href="main.css?v=35">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
           <a href="https://www.dongguk.edu/" target="_blank" rel="noopener noreferrer">Dongguk University</a>
           &ndash; and along the way, was an undergraduate research assistant at
           <a href="https://lmmlab.notion.site/" target="_blank" rel="noopener noreferrer">LMM Lab</a>.</span><span data-lang="ko">그 전에는 <a href="https://www.dongguk.edu/" target="_blank" rel="noopener noreferrer">동국대학교</a> 멀티미디어공학과에서 공부하며 <a href="https://lmmlab.notion.site/" target="_blank" rel="noopener noreferrer">LMM Lab</a>에서 학부연구생으로 활동했습니다.</span></p>
-        <p><span data-lang="en">My research interests are VLA, sim2real transfer, and robotic manipulation.</span><span data-lang="ko">주요 연구 관심사는 VLA, sim2real transfer, 로봇 매니퓰레이션입니다.</span></p>
+        <p><span data-lang="en">My research interests are VLA, Sim2Real Transfer, and Robotic Manipulation.</span><span data-lang="ko">주요 연구 관심사는 VLA, Sim2Real Transfer, 로봇 매니퓰레이션입니다.</span></p>
         <p class="links"><a href="https://github.com/GnabryGna" target="_blank" rel="noopener noreferrer">GitHub</a><span class="sep">|</span><a href="mailto:keunhaa9@gmail.com">E-mail</a><span class="sep">|</span><a href="CV_MS_Geunhakim.pdf" target="_blank" rel="noopener noreferrer">CV</a></p>
       </div>
     </div>
@@ -70,14 +70,13 @@
       <div class="publication">
         <h3>Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning<span
             class="pub-meta review"><i>Under review</i></span></h3>
-        <p class="desc"><span data-lang="en">Transfers role-aligned, object-centric representations from simulation to learn value functions that hold up on real robots.</span><span data-lang="ko">시뮬레이션에서 학습한 역할 정렬(role-aligned) 객체 중심 표현을 실제 환경으로 전이한 가치 함수 학습</span></p>
         <p><strong>G Kim</strong>, H Zhang, J Moon</p>
+        <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Sim-to-real gaps compound over a rollout, so instead of transferring a control policy, we pretrain an object-centric visual encoder in simulation for real-world value learning. Role-aligned slots for the robot, target object and goal are supervised by tracks from initial-frame boxes, and five real trajectories per task suffice to adapt them. The resulting values raise real-robot success from 23.3% to 45.0%.</span><span data-lang="ko">시뮬레이션에서 제어 정책 대신 객체 중심 시각 인코더를 사전학습해 실제 환경의 가치 학습에 활용한다. 로봇, 지시된 물체, 목표를 역할이 정렬된 슬롯으로 표현하고, 과제당 성공 궤적 5개만으로 실제 환경에 적응한다. 이렇게 얻은 가치로 실제 로봇 성공률을 23.3%에서 45.0%로 높였다.</span></p>
       </div>
 
       <div class="publication">
         <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for
           Long-Horizon Planning<span class="pub-meta review"><i>Under review</i></span></h3>
-        <p class="desc"><span data-lang="en">Adds reward-free goal-conditioned reinforcement learning to a VLA model so it can carry out long-horizon tasks.</span><span data-lang="ko">보상 없는 goal-conditioned 강화학습을 결합한 VLA 모델의 long-horizon 과제 수행</span></p>
         <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
         <details class="videos">
           <summary>Video</summary>
@@ -93,12 +92,12 @@
             </div>
           </div>
         </details>
+        <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Value-based RL fine-tuning of VLA models usually needs costly reward labels. GC-VLA instead uses the reward-free objective of offline goal-conditioned RL to learn a goal-conditioned value function. In a hierarchical design, the VLM generates intermediate subgoals and the action model produces action chunks conditioned on them, outperforming baselines on long-horizon, multi-subtask instruction following.</span><span data-lang="ko">VLA 모델의 강화학습 미세조정에는 보통 비용이 큰 보상 레이블이 필요하다. GC-VLA는 오프라인 goal-conditioned 강화학습의 보상 없는 목적함수로 목표 조건 가치 함수를 학습한다. VLM이 중간 하위 목표를 만들고 행동 모델이 이에 맞춰 행동 청크를 생성하는 계층 구조로, 여러 하위 과제로 이루어진 long-horizon 과제에서 기존 모델보다 높은 성능을 보였다.</span></p>
       </div>
 
       <div class="publication">
         <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action
           Models<span class="pub-meta review"><i>Under review</i></span></h3>
-        <p class="desc"><span data-lang="en">Learns intent-guided action representations to improve dexterous hand control in VLA models.</span><span data-lang="ko">의도(intent) 기반 행동 표현 학습을 통한 VLA 모델의 덱스터러스 핸드 제어</span></p>
         <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
         <details class="videos">
           <summary>Videos</summary>
@@ -125,12 +124,12 @@
             </div>
             </div>
           </details>
+        <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Dexterous hands are hard for VLA models because multi-finger actions are high-dimensional, strongly coupled and sensitive to contact timing. Hand Synergy Latent compresses 16-D hand commands into a shared 4-D PCA space, reaching learning criteria in 13.5&ndash;28.2% fewer steps. Hand Intent predicts target hand progress to select the hand action, raising complete outcomes on the pull task from 2 to 10 out of 10.</span><span data-lang="ko">다지 손의 행동은 고차원이고 관절 간 결합이 강하며 접촉 시점에 민감해 VLA 모델로 다루기 어렵다. Hand Synergy Latent는 16차원 손 명령을 공유 4차원 PCA 공간으로 압축해 학습 기준 도달 스텝을 13.5&ndash;28.2% 줄였다. Hand Intent는 목표 손 진행도를 예측해 손 행동을 선택하며, pull 과제의 완전 성공을 10회 중 2회에서 10회로 높였다.</span></p>
       </div>
 
       <div class="publication">
         <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion
           Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
-        <p class="desc"><span data-lang="en">Conditions a diffusion policy on a world model that predicts dynamics, improving visuomotor manipulation.</span><span data-lang="ko">동역학 예측 월드 모델로 조건화한 diffusion policy 기반 시각-운동 매니퓰레이션</span></p>
         <p>S An*, <strong>G Kim</strong>*, J Moon</p>
         <details class="videos">
           <summary>Video</summary>
@@ -146,11 +145,11 @@
             </div>
             </div>
           </details>
+        <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Diffusion policies rely on image features and do not explicitly learn how a scene evolves or how objects interact. WM-DP conditions a diffusion policy on a latent feature from a GRU-based world model, without adding architectural complexity. On real-world pick-and-place with objects of different physical properties, including a deformable object, it improves both success rate and trajectory quality.</span><span data-lang="ko">Diffusion policy는 이미지 특징에 의존해 장면의 시간적 변화나 물체 간 상호작용을 명시적으로 학습하지 않는다. WM-DP는 GRU 기반 월드 모델의 잠재 특징을 diffusion policy에 결합해, 구조를 복잡하게 만들지 않고 동역학 정보를 더한다. 물성이 다른 물체와 변형 물체를 이용한 실제 pick-and-place에서 성공률과 궤적 품질을 모두 높였다.</span></p>
       </div>
 
       <div class="publication">
         <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
-        <p class="desc"><span data-lang="en">Uses a VLA-based grasp network to classify objects from visual and language input.</span><span data-lang="ko">VLA 기반 파지 네트워크를 이용한 시각·언어 입력 물체 분류</span></p>
         <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
         <details class="videos">
           <summary>Videos</summary>
@@ -171,12 +170,12 @@
             </div>
             </div>
           </details>
+        <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Uses a VLA-based grasp network to classify objects from visual and language input.</span><span data-lang="ko">VLA 기반 파지 네트워크를 이용한 시각·언어 입력 물체 분류</span></p>
       </div>
 
       <div class="publication">
         <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global
           Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
-        <p class="desc"><span data-lang="en">Improves lane detection in challenging scenes with adaptive anchor aggregation and unified local&ndash;global embedding alignment.</span><span data-lang="ko">적응적 앵커 집계와 지역-전역 임베딩 정렬을 통한 까다로운 주행 환경에서의 차선 검출</span></p>
         <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
         <details class="videos">
           <summary>Videos &amp; figures</summary>
@@ -209,6 +208,7 @@
             </div>
             </div>
           </details>
+        <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Improves lane detection in challenging scenes with adaptive anchor aggregation and unified local&ndash;global embedding alignment.</span><span data-lang="ko">적응적 앵커 집계와 지역-전역 임베딩 정렬을 통한 까다로운 주행 환경에서의 차선 검출</span></p>
       </div>
     </div>
 
