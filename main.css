@@ -186,8 +186,7 @@ h3 {
   font-style: italic;
 }
 /* 심사 중 표시는 한 단계 더 연하게 */
-.pub-meta.review,
-.pub-meta.upcoming { color: #a0a8b0; }
+.pub-meta.review { color: #a0a8b0; }
 .publication { margin-bottom: 1em; }
 .publication p { margin-bottom: 0; color: #a0a8b0; }
 .publication p strong { font-weight: 600; color: #6b7280; }
