@@ -6,7 +6,10 @@
 *.mov
 !keti/retargeting.mp4
 !keti/retargeting_trials.mp4
-!gcvla/inference.mp4
+!gcvla/GCVLA-2.mp4
+!icra/slots.mp4
+!icra/demo.mp4
+!icra/value_graph.mp4
 !iccas_2025/red_green.mp4
 !iccas_2025/yellow_blue.mp4
 !ijcas/video_1.mp4

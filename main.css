@@ -245,6 +245,8 @@ h3 {
 #projects > .publication > .videos > summary { flex: 0 0 auto; margin-left: 1.5em; }
 #publications > .publication > .videos > .panel,
 #projects > .publication > .videos > .panel { flex: 1 0 100%; margin-left: 1.5em; }
+/* 논문 PDF 링크: 저자줄과 토글 사이에, 토글 글씨와 같은 크기로 */
+#publications > .publication > .pdf { flex: 0 0 auto; margin-left: 1.5em; font-size: .95em; }
 
 /* 과제: 영문 설명은 한 줄 전체, 한글 원제 옆에 토글이 붙습니다.
    DOM 순서가 곧 화면 순서라 order 재배치가 필요 없습니다. */

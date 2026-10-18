@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="main.css?v=38">
+  <link rel="stylesheet" href="main.css?v=39">
 </head>
 
 <body>
@@ -71,6 +71,34 @@
         <h3>Sim2Value: Transferring Role-Aligned Object-Centric Representations for Real-World Value Learning<span
             class="pub-meta review"><i>Under review</i></span></h3>
         <p><strong>G Kim</strong>, H Zhang, J Moon</p>
+        <a class="pdf" href="icra/2027_ICRA.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+        <details class="videos">
+          <summary>Videos</summary>
+          <div class="panel">
+            <div class="figure-grid">
+              <figure>
+                <video controls loop preload="metadata" playsinline>
+                  <source src="icra/slots.mp4" type="video/mp4">
+                </video>
+                <figcaption><span data-lang="en">Role-aligned slots for each target object, in simulation and on the real
+                  robot, comparing sim-only, real-only and sim+real training.</span><span data-lang="ko">시뮬레이션과 실제 환경에서 물체별 역할 정렬 슬롯, sim only, real only, sim+real 학습 비교</span></figcaption>
+              </figure>
+              <figure>
+                <video controls loop preload="metadata" playsinline>
+                  <source src="icra/value_graph.mp4" type="video/mp4">
+                </video>
+                <figcaption><span data-lang="en">Predicted values over successful and failed trajectories, compared with
+                  baseline representations.</span><span data-lang="ko">성공·실패 궤적에서 예측한 가치를 기존 표현들과 비교</span></figcaption>
+              </figure>
+              <figure>
+                <video controls loop preload="metadata" playsinline>
+                  <source src="icra/demo.mp4" type="video/mp4">
+                </video>
+                <figcaption><span data-lang="en">Real-robot rollout of the policy trained with our value labels.</span><span data-lang="ko">제안한 가치 레이블로 학습한 정책의 실제 로봇 롤아웃</span></figcaption>
+              </figure>
+            </div>
+          </div>
+        </details>
         <p class="desc"><span class="tldr">TL;DR</span><span data-lang="en">Sim-to-real gaps compound over a rollout, so instead of transferring a control policy, we pretrain an object-centric visual encoder in simulation for real-world value learning. Role-aligned slots for the robot, target object and goal are supervised by tracks from initial-frame boxes, and five real trajectories per task suffice to adapt them. The resulting values raise real-robot success from 23.3% to 45.0%.</span><span data-lang="ko">시뮬레이션에서 제어 정책 대신 객체 중심 시각 인코더를 사전학습해 실제 환경의 가치 학습에 활용했습니다. 로봇, 물체, 목표를 역할이 정렬된 슬롯으로 표현하고, 과제당 성공 궤적 5개만으로 실제 환경에 적응합니다. 이렇게 얻은 가치로 실제 로봇 성공률을 23.3%에서 45.0%로 높였습니다.</span></p>
       </div>
 
@@ -78,16 +106,17 @@
         <h3>Enhancing Vision-Language-Action Model with Reward-free Goal-conditioned Reinforcement Learning for
           Long-Horizon Planning<span class="pub-meta review"><i>Under review</i></span></h3>
         <p><strong>G Kim</strong>*, S Kim*, J Lee, J Moon</p>
+        <a class="pdf" href="gcvla/TRL.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
         <details class="videos">
           <summary>Video</summary>
           <div class="panel">
             <div class="video-row">
               <figure class="wide">
                 <video controls loop preload="metadata" playsinline>
-                  <source src="gcvla/inference.mp4" type="video/mp4">
+                  <source src="gcvla/GCVLA-2.mp4" type="video/mp4">
                 </video>
-                <figcaption><span data-lang="en">Inference rollout of the goal-conditioned policy on the
-                  long-horizon task.</span><span data-lang="ko">Long-horizon 과제에서 goal-conditioned 정책의 추론 롤아웃</span></figcaption>
+                <figcaption><span data-lang="en">Long-horizon rollouts in Kitchen-F and Kitchen-B, comparing one-step and
+                  two-step subgoal search.</span><span data-lang="ko">Kitchen-F, Kitchen-B 환경의 long-horizon 롤아웃, one-step과 two-step 하위 목표 탐색 비교</span></figcaption>
               </figure>
             </div>
           </div>
@@ -99,6 +128,7 @@
         <h3>Intent-Guided Action Representation Learning for Dexterous Hand Control in Vision-Language-Action
           Models<span class="pub-meta review"><i>Under review</i></span></h3>
         <p>M Jin*, <strong>G Kim</strong>*, J Moon</p>
+        <a class="pdf" href="ijcas/IJCAS.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
         <details class="videos">
           <summary>Videos</summary>
             <div class="panel">
@@ -131,6 +161,7 @@
         <h3>Enhancing Visuomotor Manipulation Control with a Predictive-Dynamics-Aware World Model Conditioned Diffusion
           Policy<span class="pub-meta"><i>ICCAS 2026</i></span></h3>
         <p>S An*, <strong>G Kim</strong>*, J Moon</p>
+        <a class="pdf" href="iccas_2026/ICCAS_2026.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
         <details class="videos">
           <summary>Video</summary>
             <div class="panel">
@@ -151,6 +182,7 @@
       <div class="publication">
         <h3>Classify Objects with VLA Grasp Network<span class="pub-meta"><i>ICCAS 2025</i></span></h3>
         <p>S Kim*, <strong>G Kim</strong>*, D Kim, J Moon</p>
+        <a class="pdf" href="iccas_2025/ICCAS_2025.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
         <details class="videos">
           <summary>Videos</summary>
             <div class="panel">
@@ -177,6 +209,7 @@
         <h3>Robust Lane Detection for Challenging Scenarios: Adaptive ROI Extraction with Unified Local&ndash;Global
           Embedding Alignment<span class="pub-meta"><i>2024</i></span></h3>
         <p>J Lee*, S Lee*, S Han*, <strong>G Kim</strong>*, J Lee, G Lee, S Cho</p>
+        <a class="pdf" href="a3net/A3Net.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
         <details class="videos">
           <summary>Videos &amp; figures</summary>
             <div class="panel">
