@@ -77,7 +77,8 @@ h1 { font-size: 2.4em; line-height: 2.4em; font-weight: 500; }
 /* align-items 기본값 stretch 덕분에 사진이 h1 위쪽부터
    마지막 문단 아래까지 텍스트 높이에 맞춰 늘어납니다. */
 #intro { padding-top: 3em; display: flex; }
-#intro-text { max-width: 34em; }
+/* 글이 짧아도 폭을 34em 으로 유지해 사진 위치가 흔들리지 않게 합니다. */
+#intro-text { flex: 0 1 34em; max-width: 34em; }
 
 #intro-image {
   order: 2;              /* DOM 은 사진이 먼저 — 데스크톱에서만 오른쪽으로 */
